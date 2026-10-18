@@ -59,9 +59,19 @@ Ví dụ với môi trường định lý (? nó cũng không có môi trường
 	\end{document}
 ```
 
-Điều này cũng được áp dụng tương tự với tất cả với [ngôn ngữ khác](). Chẳng hạn, để viết các từ "định lý", "định nghĩa" ..vv.. đang là tiếng Anh sang tiếng Việt. Người dùng trước tiên cần phải khai báo package [ngôn ngữ tiếng Việt ](), sau đó người dùng chỉ cần gõ lại từ "theorem" (tiếng Anh) sang từ "định lý" (tiếng Việt) ở `text`. 
+Điều này cũng được áp dụng tương tự với tất cả với [ngôn ngữ khác](). Chẳng hạn, để viết các từ "định lý", "định nghĩa" ..vv.. đang là tiếng Anh sang tiếng Việt. Trước tiên, người dùng cần phải khai báo package [ngôn ngữ tiếng Việt ](). Sau đó người dùng chỉ cần gõ lại từ "theorem" (tiếng Anh) sang từ "định lý" (tiếng Việt) ở `text`.
 
-Quay trở lại ví dụ trên, lúc này từ định lý và định nghĩa đều được viết sang tiếng Việt:
+```latex
+% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
+% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt tốt hơn trong LaTeX
+\usepackage[utf8]{vietnam}
+
+% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Việt
+\newtheorem{theorem}{Định lý}
+\newtheorem{definition}{Định nghĩa}
+```
+
+Quay trở lại ví dụ trên, lúc này từ định lý và định nghĩa đều được viết sang tiếng Việt đầy đủ như sau:
 
 ```latex
 \documentclass{article}
