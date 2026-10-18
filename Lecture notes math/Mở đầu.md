@@ -2,13 +2,13 @@
 
 Một trong những động lực lớn nhất thúc đẩy [Donald Knuth]() khi bắt đầu phát triển hệ thống TeX ban đầu là tạo ra một công cụ cho phép xây dựng các công thức toán học một cách đơn giản, đồng thời trông chuyên nghiệp khi in ấn. Việc ông thành công có lẽ là lý do tại sao TeX (và sau này là LaTeX) trở nên phổ biến trong cộng đồng khoa học. Việc trình bày toán học là một trong những thế mạnh lớn nhất của LaTeX. Đây cũng là một chủ đề rộng lớn do sự tồn tại của rất nhiều ký hiệu toán học.[^1]
 
-. . . . (? viết tiếp) Để bắt đầu với chủ đề thú vị, đầy hấp dẫn nhưng cũng rất rộng lớn, khó nhằn đây, ta sẽ bắt đầu với phép toán thông thường, quen thuộc sau đây: 
+. . . . (? viết tiếp) Để bắt đầu với chủ đề thú vị, đầy hấp dẫn nhưng cũng rất rộng lớn, khó nhằn đây, ta sẽ bắt đầu với một phép toán quen thuộc sau đây: 
 
 $$
 1+1=2
 $$
 
-Đối với phép tính thông thường trên , người dùng có thể dễ dàng nhập trực tiếp hai [số tự nhiên]() (1, 2), toán tử số học (arithmetic operators) (+, -) và toán tử quan hệ (relational operators) (=) vào trong phần soạn thảo văn LaTeX. 
+Đối với phép tính thông thường trên, người dùng có thể dễ dàng nhập trực tiếp hai [số tự nhiên]() (1, 2), toán tử số học (arithmetic operators) (+, -) và toán tử quan hệ (relational operators) (=) vào trong phần soạn thảo văn LaTeX. 
 
 ```latex
 \documentclass{article}
@@ -56,7 +56,7 @@ y = ax + b
 
 ..vv..
 
-Tập hợp các kí hiệu thông thường trên có thể được gõ trực tiếp trên bàn phím, người dùng có thể xem lại bài . . . (? bài học nào chủ đề toán học này) 
+Tập hợp các kí hiệu thông thường trên có thể được gõ trực tiếp trên bàn phím, người dùng có thể xem lại bài . . . (? bài học nào trong chủ đề latex này) 
 
 Tuy vậy, để người dùng có thể viết phần toán học có các [kí hiệu, chữ cái toán học đặc biệt]() ở mức độ phức tạp hơn. Ví dụ nếu người dùng muốn viết [chữ cái Hy Lạp]() $\sigma$ (đọc là sigma), [hằng số Dirac]() $\hbar$ (đọc là h-bar), toán tử số học ($\cdot$), [toán tử quan hệ]() $\ge$ (đọc là lớn hơn hoặc bằng), viết [phân số]() $\dfrac{\hbar}{2}$, [chỉ số dưới]() $x, p$ trong phương trình toán học từ nguyên lý bất định Heisenberg (? tên tiếng Anh là gì). . . (? nguyên lý này nói về vấn đề gì trong vật lý) sau đây: 
 
@@ -64,11 +64,11 @@ $$
 \sigma_{x} \cdot \sigma_{p} \ge \frac{\hbar}{2} 
 $$
 
-Vì những kí hiệu, chữ cái đó không được hiện hữu sẵn trên bàn phím (thậm chí nếu có, thì hệ thống lúc này sẽ hiểu các kí hiệu đó được sử dụng cho mục đích khác trong LaTeX (? vì sao hệ thống bị nhầm lẫn với các kí hiệu đó), xem lại bài học [kí hiệu đặc biệt]() để hiểu rõ lại chi tiết), nên chúng ta không thể gõ được trực tiếp chúng vào trong phần soạn thảo LaTeX. 
+Vì những kí hiệu, chữ cái đó không được hiện hữu sẵn trên bàn phím (thậm chí nếu có, thì hệ thống đôi khi sẽ hiểu các kí hiệu đó được sử dụng cho mục đích khác trong LaTeX (? vì sao hệ thống bị nhầm lẫn với các kí hiệu đó), xem lại bài học [kí hiệu đặc biệt]() để hiểu rõ lại chi tiết), nên chúng ta không thể gõ được trực tiếp chúng vào trong phần soạn thảo LaTeX. 
 
 Thay vào đó, người dùng cần phải viết các kí hiệu đó dưới dạng một số lệnh nhất định được hệ thống cài đặt sẵn mặc định trực tiếp hoặc phải khai báo các package nhất định mà nhất định người dùng sẽ bắt gặp rất nhiều ở các bài học về toán học ở phía trước đang chờ đón mọi người . . . (? viết lại), 
 
-```latex
+```tex
 \documentclass{article}
 
 \usepackage[utf8]{vietnam}
@@ -122,7 +122,7 @@ Ngoài ra, phương trình được hiện thị ở trong trang tài liệu t�
 
 Thâm chí, nếu người dùng viết trực tiếp các kí hiệu, chữ cái trên vào cùng chung dòng với văn bản  (? . . . sẽ dẫn đến vấn đề gì, vì sao)  (**Nháp** . . . Người dùng có thể thấy, . . .  vì hệ thống lúc này đang hiểu . . . (?hiểu gì). Để có thể khắc phục việc viết văn bản trong toán học, người dùng có thể xem lướt qua nhanh tạm thời bài học [văn bản trong toán học]() đây, nhưng điều quan trọng mà người dùng cần phải tập trung ở đây, lúc này là việc làm sao để chúng ta có thể viết các kí hiệu, chữ cái phức tạp đó sao cho hệ thống có thể hiểu được là ta đang muốn đâu là văn bản thông thường và đâu là văn bản toán học.)
 
-Từ hai vấn đề cơ bản mà người viết đã nêu trên, người dùng có thể thấy rằng, để viết được một hoặc [nhiều phương trình toán học]() có các kí hiệu, chữ cái phức tạp (? lặp từ quá nhỉ), chúng cần phải được đặt vào trong lệnh, môi trường, riêng biệt khác, để hệ thống có thể dễ dàng phân biệt, xác nhận . . . (? đúng ko nhỉ) nhằm phân tách việc đâu là văn bản chữ thông thường, đâu là văn bản toán học, giúp hiển thị chính xác các kí hiệu, chữ cái toán học mà người dùng mong muốn xuất hiện trên trang tài liệu, khi biên dịch (compile) từ phần soạn thảo LaTeX.
+Từ hai vấn đề cơ bản mà người viết đã nêu trên, người dùng có thể thấy rằng, để viết được một hoặc [nhiều phương trình toán học]() có các kí hiệu, chữ cái phức tạp (? lặp từ quá nhỉ), chúng cần phải được đặt vào trong lệnh, môi trường riêng biệt khác, để hệ thống có thể dễ dàng phân biệt, xác nhận . . . (? đúng ko nhỉ) nhằm phân tách việc đâu là văn bản chữ thông thường, đâu là văn bản toán học, giúp hiển thị chính xác các kí hiệu, chữ cái toán học mà người dùng mong muốn xuất hiện trên trang tài liệu, khi biên dịch (compile) từ phần soạn thảo LaTeX.
 
 . . . (giới thiệu về inline math, display đây)
 
