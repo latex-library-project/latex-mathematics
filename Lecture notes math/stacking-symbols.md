@@ -14,7 +14,7 @@ Phải khai báo package `amsmath`
 \overset{trên}{dưới}
 ```
 
-Ví dụ về lệnh trên với phép biến đổi Laplace [^1]: 
+Ví dụ về lệnh trên với phép biến đổi Laplace[^1] : 
 
 ```tex
 \documentclass{article}
@@ -66,4 +66,4 @@ $$
 
 ---
 
-[^1] https://math.libretexts.org/Bookshelves/Differential_Equations/Differential_Equations_for_Engineers_(Lebl)/6%3A_The_Laplace_Transform/6.1%3A_The_Laplace_Transform
+[^1]: https://math.libretexts.org/Bookshelves/Differential_Equations/Differential_Equations_for_Engineers_(Lebl)/6%3A_The_Laplace_Transform/6.1%3A_The_Laplace_Transform
