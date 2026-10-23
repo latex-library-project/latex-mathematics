@@ -1,6 +1,6 @@
 **Câu hỏi 1**: Thế nào là phương trình toán học ?   
 
-
+Đây là câu hỏi hay và cũng đáng để ta ôn lại 
 
 **Câu hỏi 2**: AMS là gì ? 
 
