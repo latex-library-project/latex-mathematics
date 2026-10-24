@@ -1,6 +1,8 @@
+# Các bài học
+
 ## a. 
 
-[[Mở đầu]]  
+[Mở đầu](/Lecture%20notes/Mở%20đầu.md)  
 
 ## b. 
 

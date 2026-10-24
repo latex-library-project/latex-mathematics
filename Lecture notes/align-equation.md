@@ -16,21 +16,6 @@ Sẽ có một vài ví dụ tạm thời được trình bày, để hiểu và
 
 Môi trường `eqnarray*` này không cần đặt vào lệnh, môi trường viết phương trình toán học nào cả. Chúng được sử dụng như là một môi trường riêng biệt. 
 
-```tex
-\documentclass{article}
-
-\begin{document}
-
-\begin{eqnarray}
-    \nabla \cdot \mathbf{E} &=& \frac{\rho}{\epsilon_0} \\
-    \nabla \cdot \mathbf{B} &=& 0 \\
-    \nabla \cdot \mathbf{E} &=& - \frac{\partial \mathbf{B}}{\partial t}\\
-    \nabla \cdot \mathbf{B} &=& \mu_0 \left(\mathbf{J} + \epsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right) 
-\end{eqnarray}
-
-\end{document}
-```
-
 Gợi ý viết ví dụ: 
 
 + Sử dụng môi trường `eqnarray` để viết các phương trình Maxwell mô tả . . . (trong vật lý).
@@ -71,10 +56,6 @@ Trong một số trường hợp khi sử dụng môi trường `eqnarray`, vì 
 ```
 
 được đặt ở bên cạnh dòng viết phương trình đó. 
-
-Điều này sẽ rất có ích đối với việc người dùng sử dụng môi trường `align` để viết một phương trình hoặc khai triển biểu thức dài: (?) 
-
-... (chưa viết)
 
 Nếu như người dùng không muốn tất cả các dòng phương trình đều không được đánh số bên cạnh, ta có thể sử dụng lệnh `\nonumber` trên như sau: 
 
@@ -155,10 +136,10 @@ $$
 >[!WARNING]
 > Nếu như người dùng quên khai báo package `amsmath` để sử dụng môi trường `align`, hệ thống LaTeX sẽ báo lỗi **Environment align undefined.**
 
+Nếu như người dùng bỏ package `amsmath` ở ví dụ viết phương trình Maxwell trên:
+
 ```tex
 \documentclass{article}
-
-\usepackage{amsmath}
 
 \begin{document}
 
@@ -172,7 +153,9 @@ $$
 \end{document}
 ```
 
-Người dùng có thể thấy, ở dòng thứ thứ 5 của đoạn mã sẽ xuất hiện 
+Người dùng có thể thấy, ở dòng thứ thứ 5 của đoạn mã sẽ xuất hiện thông báo lỗi như đã lưu ý trên. 
+
+. . . (? chưa viết để kết nối với đoạn này) Điều này sẽ rất có ích đối với việc người dùng sử dụng môi trường `align` để viết một phương trình hoặc khai triển biểu thức dài. Xem bài học [viết phương trình dài](/Lecture%20notes/display-long-equation.md) để biết thêm chi tiết. 
 
 ### Môi trường `align*`:
   
@@ -210,10 +193,18 @@ $$
 +  Môi trường gather giúp khai triển các phương trình liên tiếp, căn giữa mà không cần quan tâm đến bất kỳ sự căn chỉnh nào (? chưa biết lệnh này dùng để làm gì) 
 
 ```latex
-\[\begin{gather*} 
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{gather*} 
 2x - 5y =  8 \\ 
 3x^2 + 9y =  3a + c
-\end{gather*}\]
+\end{gather*}
+
+\end{document}
 ```
 
 $$
@@ -248,6 +239,8 @@ $$
 \end{document}
 ```
 
+Kết quả cho ra được sẽ là: 
+
 $$
 \begin{split}
     (a+b)^2 &= (a+b) \cdot (a+b) \\
@@ -257,7 +250,37 @@ $$
 \end{split}
 $$
 
-### 
+Ta cũng có thể sử dụng môi trường `align*` để khai triển hằng đẳng thức đánh nhớ trên: 
+
+```tex
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{align*}
+    (a+b)^2 &= (a+b) \cdot (a+b) \\
+            &= a \cdot (a+b) + b \cdot (a+b) \\
+            &= a^2 + ab + ba + b^2 \\
+            &= a^2 +2ab + b^2
+\end{align*}
+
+\end{document}
+```
+
+Kết quả cho ra được cũng sẽ tương tự như việc người dùng sử dụng môi trường `split`: 
+
+$$
+\begin{align*}
+    (a+b)^2 &= (a+b) \cdot (a+b) \\
+            &= a \cdot (a+b) + b \cdot (a+b) \\
+            &= a^2 + ab + ba + b^2 \\
+            &= a^2 +2ab + b^2
+\end{align*}
+$$
+
+Vậy đâu là sự khác nhau giữa môi trường `align*` và môi trường `split`. 
 
 ## Câu hỏi: 
 
@@ -268,3 +291,5 @@ $$
 (Tham khảo câu trả lời tại 
 
 https://www.tug.org/pracjourn/2006-4/madsen/)
+
++ Sự khác nhau giữa môi trường `align*` và môi trường `split`. 
