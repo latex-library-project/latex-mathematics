@@ -69,12 +69,11 @@ Nếu như người dùng không muốn tất cả các dòng phương trình đ
 \begin{document}
 
 \begin{eqnarray}
-    662 &=& 414 \cdot 1 + 248 \nonumber \\
-    414 &=& 248 \cdot 1 + 166 \nonumber \\
-    248 &=& 166 \cdot 1 + 82 \nonumber \\
-    166 &=& 82 \cdot 2 + 2 \nonumber \\ 
-    82 &=& 2 \cdot 41 \nonumber
-\end{eqnarray} 
+    \nabla \cdot \mathbf{E} &=& \frac{\rho}{\epsilon_0} \nonumber \\
+    \nabla \cdot \mathbf{B} &=& 0 \nonumber \\
+    \nabla \cdot \mathbf{E} &=& - \frac{\partial \mathbf{B}}{\partial t} \nonumber \\
+    \nabla \cdot \mathbf{B} &=& \mu_0 \left(\mathbf{J} + \epsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right) \nonumber
+\end{eqnarray}
 
 \end{document}
 ```
@@ -288,11 +287,68 @@ $$
 
 Vậy đâu là sự khác nhau giữa môi trường `align*` và môi trường `split` ?
 
+
+## Môi trường `alignat`: 
+
++ Ví dụ với việc khai triển trong chứng minh x + ( y + z) = (x + y) + z
+
+Tham khảo ở tài liệu đây: https://www.math.wustl.edu/~kumar/courses/310-2011/Peano.pdf (trang 2). 
+
+```tex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+
+\begin{alignat*}{3}
+    x + \sigma(y) &= x + (y+1) &\qquad  &(\text{by definition of addition}) \\
+                  &= (x + y) + 1 & &(\text{by associativity, proved before}) \\
+                  &\, \cdots \\ 
+                  &= \sigma(y) + x & &(\text{by definition of addition})
+\end{alignat*}
+
+\end{document}
+```
+
+Kết quả cho ra được sẽ là: 
+
+$$
+\begin{alignat*}{3}
+    x + \sigma(y) &= x + (y+1) &\qquad  &(\text{by definition of addition}) \\
+                  &= (x + y) + 1 & &(\text{by associativity, proved before}) \\
+                  &\, \cdots \\ 
+                  &= \sigma(y) + x & &(\text{by definition of addition})
+\end{alignat*}
+$$
+
++ So sánh với việc nếu sử dụng lệnh `align*` thay vì lệnh `alignat` ở ví dụ trên.  
+
+```tex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+
+\begin{align*}
+    x + \sigma(y) &= x + (y+1) &,  &(\text{by definition of addition}) \\
+                  &= (x + y) + 1 & &(\text{by associativity, proved before}) \\
+                  &\, \cdots \\ 
+                  &= \sigma(y) + x & &(\text{by definition of addition})
+\end{align*}
+
+giải thích . . . (? chưa viết)
+
+\end{document}
+```
+
++ Tìm phản ví dụ cho việc sử dụng lệnh `align*` lại ổn hơn việc sử dụng `alignat`. 
+
+Câu hỏi: Vậy khi nào thì nên sử dụng lệnh `align`, thay vì lệnh `alignat` và ngược lại. Đâu là trường hợp mà bạn có thể sử dụng một trong hai mà không cần phải phân vân nên ưu tiên lệnh này hơn so với lệnh kia ? 
+
 ---
 
 
-
 ## Câu hỏi: 
+
++ Một dấu `&` là một lần giúp ta biết rằng sẽ tạo ra cột mới và khoảng cách giữa chúng được mở rộng ra. Tuy vậy, nếu như để `&` kết hợp với dấu `=`, các lệnh [khoảng cách trong toán học](/Lecture%20notes/Khoảng%20cách%20trong%20chế%20độ%20toán%20học.md), thì khoảng cách này được thu hẹp lại. Vì sao lại có sự khác biệt này nhỉ ? 
 
 + Sự giống và khác giữa hai lệnh `eqnarray` và `align`.  
 + Ưu và nhược của cả hai lệnh trên. 
