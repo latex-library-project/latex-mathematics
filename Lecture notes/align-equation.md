@@ -16,6 +16,8 @@ Sẽ có một vài ví dụ tạm thời được trình bày, để hiểu và
 
 Môi trường `eqnarray*` này không cần đặt vào lệnh, môi trường viết phương trình toán học nào cả. Chúng được sử dụng như là một môi trường riêng biệt. 
 
+Hơn nữa, môi trường này đã được hệ thống cài đặt sẵn, nên ta chỉ cần sử dụng môi trường mà không cần phải khai báo thêm package nào cả.
+
 Gợi ý viết ví dụ: 
 
 + Sử dụng môi trường `eqnarray` để viết các phương trình Maxwell mô tả . . . (trong vật lý).
@@ -49,13 +51,15 @@ $$
 \end{eqnarray}
 $$
 
-Trong một số trường hợp khi sử dụng môi trường `eqnarray`, vì nó đánh số hết tất cả các phương trình, nên trong trường hợp để dòng phương trình đó không đánh số, ta sẽ sử dụng lệnh 
+Khi người dùng sử dụng môi trường `eqnarray`, vì nó đánh số hết tất cả các phương trình, nên trong trường hợp người dùng không muốn để dòng phương trình đó đước đánh số bên cạnh, ta sẽ sử dụng lệnh 
 
 ```tex
 \nonumber
 ```
 
 được đặt ở bên cạnh dòng viết phương trình đó. 
+
+
 
 Nếu như người dùng không muốn tất cả các dòng phương trình đều không được đánh số bên cạnh, ta có thể sử dụng lệnh `\nonumber` trên như sau: 
 
@@ -75,7 +79,7 @@ Nếu như người dùng không muốn tất cả các dòng phương trình đ
 \end{document}
 ```
 
-Một cách khác để tối ưu đoạn mã trên, thay vì phải lặp lại lệnh `\nonumber` nhiều lần, thì ta sẽ sử dụng môi trường `eqnarray*`.
+Một cách khác để tối ưu đoạn mã trên, thay vì phải lặp lại nhiều lần lệnh `\nonumber`, thì ta sẽ sử dụng môi trường `eqnarray*`.
 
 ### Môi trường `eqnarray*`:
 
@@ -98,6 +102,8 @@ Gợi ý viết ví dụ:
 
 \end{document}
 ```
+
+Từ những điều ở trên, ta có thể thấy rằng, chúng ta nên sử dụng lệnh `\nonumber` khi riêng lẻ, thay vì cộng dồn. (? mô tả lại nhé).  
 
 Một cách khác để căn chỉnh các dòng phương trình toán học thay cho môi trường `eqnarray` là sử dụng một môi trường mới có tên là `align`.  
 
@@ -186,7 +192,7 @@ $$
 $$
 
 >[!WARNING]
->Người dùng không được để môi trường `align*` vào trong lệnh hoặc môi trường viết toán học. Nếu không, hệ thống sẽ báo lỗi . . . (? báo lỗi gì). 
+>Người dùng không được phép để môi trường `align`, `align*` vào trong lệnh hoặc môi trường viết toán học. Nếu không, hệ thống sẽ thông báo lỗi **Package amsmath Error: Erroneous nesting of equation structures;** (? kiểm tra lại tên gọi lỗi này). 
 
 ### Môi trường `gather`: 
 
@@ -218,7 +224,7 @@ $$
 
 + Môi trường `split` giúp khai triển đẳng thức đáng nhớ căn bản sau:  
 
-(nháp. . .chẳng hạn như ví dụ ở overleaf đây (? thay bằng một ví dụ khác về khai triển $a^n + b^n$  và ví sao không có công thức $a^2 + b^2$))   
+(nháp. . .chẳng hạn như ví dụ ở sau đây (? thay bằng một ví dụ khác về khai triển $a^n + b^n$  và ví sao không có công thức $a^2 + b^2$))   
 
 ```latex
 \documentclass{article}
@@ -280,7 +286,11 @@ $$
 \end{align*}
 $$
 
-Vậy đâu là sự khác nhau giữa môi trường `align*` và môi trường `split`. 
+Vậy đâu là sự khác nhau giữa môi trường `align*` và môi trường `split` ?
+
+---
+
+
 
 ## Câu hỏi: 
 
