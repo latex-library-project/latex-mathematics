@@ -380,6 +380,9 @@ Nếu sử dụng cách căn trái phương trình ở trên, thì tất cả c�
 Nếu như chúng ta muốn kiểm soát lúc nào thì muốn căn trái, lúc nào thì không, ta có thể dựng môi trường `flalign`. 
 
 
+Nên hạn chế sử dụng môi trường này. 
+
+---
 
 ## Câu hỏi: 
 
