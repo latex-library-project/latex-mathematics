@@ -1,4 +1,6 @@
-## Giới thiệu:
+## Bài học:
+
+### Giới thiệu:
 
 Một trong những động lực lớn nhất thúc đẩy [Donald Knuth]() khi bắt đầu phát triển hệ thống TeX ban đầu là tạo ra một công cụ cho phép xây dựng các công thức toán học một cách đơn giản, đồng thời trông chuyên nghiệp khi in ấn. Việc ông thành công có lẽ là lý do tại sao TeX (và sau này là LaTeX) trở nên phổ biến trong cộng đồng khoa học. Việc trình bày toán học là một trong những thế mạnh lớn nhất của LaTeX. Đây cũng là một chủ đề rộng lớn do sự tồn tại của rất nhiều ký hiệu toán học.[^1]
 
@@ -138,7 +140,7 @@ Từ hai vấn đề cơ bản mà người viết đã nêu trên, người dù
 
 ---
 
-##  inline math: 
+###  inline math: 
 
 Để viết toán học ở chế độ **inline math**, người dùng cần phải viết chúng vào bên trong một trong ba cách sau: 
 
@@ -272,7 +274,7 @@ Còn đối với việc viết một phương trình dù ngắn hoặc dài, đ
 
 ---
 
-##  display math:
+###  display math:
 
 Để viết toán học ở chế độ **display math**, người dùng cần viết chúng vào bên trong một trong ba cách sau:
 
@@ -542,14 +544,23 @@ $$
 </center> 
 
 ---
-## Tài liệu tham khảo: 
+
+###  Tài liệu tham khảo: 
 
 \[1]: Nguồn tham khảo viết toán học ở Overleaf: https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Adding_math_to_LaTeX. 
 
 \[2]:  Nguồn tham khảo lời viết này sử dụng ở Wikibook: https://en.wikibooks.org/wiki/LaTeX/Mathematics 
+
+
+---
+
+## Câu hỏi: 
+
+---
 
 <!-- footnote -->
 
 [^1]: [https://en.wikibooks.org/wiki/LaTeX/Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
 
 [^2]: Còn được gọi là hằng số Planck rút gọn . . . (? bổ sung sau) là biến thể từ chữ h là chữ cái Latinh thông thường, có thể được gõ trực tiếp trên bàn phím. 
+

@@ -59,8 +59,6 @@ Khi người dùng sử dụng môi trường `eqnarray`, vì nó đánh số h�
 
 được đặt ở bên cạnh dòng viết phương trình đó. 
 
-
-
 Nếu như người dùng không muốn tất cả các dòng phương trình đều không được đánh số bên cạnh, ta có thể sử dụng lệnh `\nonumber` trên như sau: 
 
 ```tex
@@ -288,7 +286,7 @@ $$
 Vậy đâu là sự khác nhau giữa môi trường `align*` và môi trường `split` ?
 
 
-## Môi trường `alignat`: 
+### Môi trường `alignat`: 
 
 + Ví dụ với việc khai triển trong chứng minh x + ( y + z) = (x + y) + z
 
@@ -344,6 +342,43 @@ giải thích . . . (? chưa viết)
 Câu hỏi: Vậy khi nào thì nên sử dụng lệnh `align`, thay vì lệnh `alignat` và ngược lại. Đâu là trường hợp mà bạn có thể sử dụng một trong hai mà không cần phải phân vân nên ưu tiên lệnh này hơn so với lệnh kia ? 
 
 ---
+
+### Môi trường `flalign`
+
+Để căn trái phương trình trong trang tài liệu, người dùng có thể xem lại bài học [mở đầu](/Lecture%20notes/Mở%20đầu.md). 
+
+(**Nháp luôn bài học**: 
+
+Để có thể căn trái phương trình, người dùng để thuộc tính **fleqn** ở phần lệnh khai báo lớp tài liệu: 
+
+```tex
+\documentclass[fleqn]{article}
+```
+
+Sau đó, ta chỉ cần sử dụng lệnh hoặc môi trường viết toán học, khi biên dịch đoạn mã phương trình đó sẽ tự động căn trái trang tài liệu. 
+
+Ví dụ: 
+
+```tex
+\documentclass[fleqn]{article}
+\setlength{\mathindent}{0pt} % bỏ thụt lề, mặc định là 2.5em
+
+\begin{document}
+
+\begin{equation}
+E = m \cdot c^2
+\end{equation}
+
+\end{document}
+```
+(thay bằng một ví dụ mới sau) )
+
+Tuy vậy, không phải lúc nào chúng ta cũng muốn phương trình được căn trái cả, chỉ một vài trường hợp như (?... gồm những gì nào và phân tích chúng) :
+
+Nếu sử dụng cách căn trái phương trình ở trên, thì tất cả các phương trình đều được tự động căn trái. 
+
+Nếu như chúng ta muốn kiểm soát lúc nào thì muốn căn trái, lúc nào thì không, ta có thể dựng môi trường `flalign`. 
+
 
 
 ## Câu hỏi: 
