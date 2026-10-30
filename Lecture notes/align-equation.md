@@ -217,74 +217,7 @@ $$
 \end{gather*}
 $$
 
-### Môi trường `split`: 
-
-+ Môi trường `split` giúp khai triển đẳng thức đáng nhớ căn bản sau:  
-
-(nháp. . .chẳng hạn như ví dụ ở sau đây (? thay bằng một ví dụ khác về khai triển $a^n + b^n$  và ví sao không có công thức $a^2 + b^2$))   
-
-```latex
-\documentclass{article}
-
-\usepackage{amsmath}
-
-\begin{document}
-
-\[
-\begin{split}
-    (a+b)^2 &= (a+b) \cdot (a+b) \\
-            &= a \cdot (a+b) + b \cdot (a+b) \\
-            &= a^2 + ab + ba + b^2 \\
-            &= a^2 +2ab + b^2
-\end{split}
-\]
-
-\end{document}
-```
-
-Kết quả cho ra được sẽ là: 
-
-$$
-\begin{split}
-    (a+b)^2 &= (a+b) \cdot (a+b) \\
-            &= a \cdot (a+b) + b \cdot (a+b) \\
-            &= a^2 + ab + ba + b^2 \\
-            &= a^2 +2ab + b^2
-\end{split}
-$$
-
-Ta cũng có thể sử dụng môi trường `align*` để khai triển hằng đẳng thức đánh nhớ trên: 
-
-```tex
-\documentclass{article}
-
-\usepackage{amsmath}
-
-\begin{document}
-
-\begin{align*}
-    (a+b)^2 &= (a+b) \cdot (a+b) \\
-            &= a \cdot (a+b) + b \cdot (a+b) \\
-            &= a^2 + ab + ba + b^2 \\
-            &= a^2 +2ab + b^2
-\end{align*}
-
-\end{document}
-```
-
-Kết quả cho ra được cũng sẽ tương tự như việc người dùng sử dụng môi trường `split`: 
-
-$$
-\begin{align*}
-    (a+b)^2 &= (a+b) \cdot (a+b) \\
-            &= a \cdot (a+b) + b \cdot (a+b) \\
-            &= a^2 + ab + ba + b^2 \\
-            &= a^2 +2ab + b^2
-\end{align*}
-$$
-
-Vậy đâu là sự khác nhau giữa môi trường `align*` và môi trường `split` ?
-
+---
 
 ### Môi trường `alignat`: 
 
@@ -382,6 +315,175 @@ Nếu như chúng ta muốn kiểm soát lúc nào thì muốn căn trái, lúc 
 Xem minh họa qua bài viết này của wiki: https://en.wikipedia.org/wiki/Heisenberg_picture và https://en.wikipedia.org/wiki/Mathematical_formulation_of_the_Standard_Model
 
 Nên hạn chế sử dụng môi trường này. (Tìm trường hợp để phân tích cho luận điểm này của mình) 
+
+--- 
+
+### Môi trường `aligned`: 
+
+. . . (thông thường để chỉ đánh số duy nhất trong môi trường `align`, ta sẽ làm như sau)
+
+```tex
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{align}
+    \frac{dx}{dt} &= \sigma (y - x) \nonumber \\
+    \frac{dy}{dt} &= x (\rho - z) - y \\
+    \frac{dz}{dt} &= xy - \beta z \nonumber 
+\end{align}
+
+\end{document}
+```
+
+. . . (một cách khác tiện lợi hơn là sử dụng môi trường mới `aligned`. Tuy nói là mới nhưng bản chất môi trường `aligned` này hoàn toàn giống với các môi trường `align`, `alignat`, `flalign` mà ta đã xem qua ở trên. Chỉ khác ở chỗ môi trường `aligned` không thể được sử dụng độc lập, mà chỉ có thể được sử dụng khi đặt chúng vào bên trong lệnh hoặc môi trường chế độ toán **display math**.)
+
+```tex
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{equation}
+    \begin{aligned}
+        \frac{dx}{dt} &= \sigma (y - x) \\
+        \frac{dy}{dt} &= x (\rho - z) - y \\
+        \frac{dz}{dt} &= xy - \beta z  
+    \end{aligned}
+\end{equation}
+
+\end{document}
+```
+
+Kết quả cho ra được cũng sẽ giống với cách viết ban đầu: 
+
+$$
+\begin{equation}
+    \begin{aligned}
+        \frac{dx}{dt} &= \sigma (y - x) \\
+        \frac{dy}{dt} &= x (\rho - z) - y \\
+        \frac{dz}{dt} &= xy - \beta z  
+    \end{aligned}
+\end{equation}
+$$
+
+. . . 
+
+
+Tương tự như môi trường `aligned`, ta còn có các môi trường khác gồm: 
+
+### Môi trường `alignedat`
+
+. . . (liệu có cần thiết hay không ?)
+
+---
+
+### Môi trường `gathered`
+
+. . . (liệu có cần thiết hay không ?)
+
+. . . (**Nháp** tìm một ví dụ mới sau)
+
+```tex
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{equation}
+    \begin{gathered}
+    \sin(x) = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!} x^{2n+1} \\
+    = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots
+    \end{gathered}
+\end{equation}
+
+\end{document}
+```
+
+Kết quả cho ra được sẽ là: 
+
+$$
+\begin{equation}
+    \begin{gathered}
+    \sin(x) = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!} x^{2n+1} \\
+    = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots
+    \end{gathered}
+\end{equation}
+$$
+
+---
+
+### Môi trường `split`: 
+
++ Môi trường `split` giúp khai triển đẳng thức đáng nhớ căn bản sau:  
+
+(nháp. . .chẳng hạn như ví dụ ở sau đây (? thay bằng một ví dụ khác về khai triển $a^n + b^n$  và ví sao không có công thức $a^2 + b^2$))   
+
+```latex
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\[
+\begin{split}
+    (a+b)^2 &= (a+b) \cdot (a+b) \\
+            &= a \cdot (a+b) + b \cdot (a+b) \\
+            &= a^2 + ab + ba + b^2 \\
+            &= a^2 +2ab + b^2
+\end{split}
+\]
+
+\end{document}
+```
+
+Kết quả cho ra được sẽ là: 
+
+$$
+\begin{split}
+    (a+b)^2 &= (a+b) \cdot (a+b) \\
+            &= a \cdot (a+b) + b \cdot (a+b) \\
+            &= a^2 + ab + ba + b^2 \\
+            &= a^2 +2ab + b^2
+\end{split}
+$$
+
+Ta cũng có thể sử dụng môi trường `align*` để khai triển hằng đẳng thức đánh nhớ trên: 
+
+```tex
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{align*}
+    (a+b)^2 &= (a+b) \cdot (a+b) \\
+            &= a \cdot (a+b) + b \cdot (a+b) \\
+            &= a^2 + ab + ba + b^2 \\
+            &= a^2 +2ab + b^2
+\end{align*}
+
+\end{document}
+```
+
+Kết quả cho ra được cũng sẽ tương tự như việc người dùng sử dụng môi trường `split`: 
+
+$$
+\begin{align*}
+    (a+b)^2 &= (a+b) \cdot (a+b) \\
+            &= a \cdot (a+b) + b \cdot (a+b) \\
+            &= a^2 + ab + ba + b^2 \\
+            &= a^2 +2ab + b^2
+\end{align*}
+$$
+
+Vậy đâu là sự khác nhau giữa môi trường `align*` và môi trường `split` ?
 
 ---
 
