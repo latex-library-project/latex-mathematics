@@ -4,6 +4,8 @@ Nơi đây là nháp cho các bài học toán mà mình chưa viết vào bài 
 
 . . . 
 
+(... Một số ví dụ mà gói mathtools này sẽ hỗ trợ gói amsmath, trong trường hợp gói amsmath không thể được sử dụng để viết phần toán học đó)
+
 ---
 
 ## Bổ sung bài học định nghĩa, định lý, ...vv..
@@ -333,112 +335,6 @@ Dấu này được sử dụng chính chỉ trong việc viết . . . (? dùng 
 
 . . . . (? giải thích lệnh này) 
 
----
-
-## Viết văn bản trong chế độ toán học 
-
-Đã viết một phần bên [[Lecture notes]].  
-
-Khi người dùng viết lệnh `\text` ở sau một số hay một từ nào đó như ở ví dụ sau: 
-
-```latex
-\documentclass{article}
-\usepackage{amsmath}
-\usepackage[utf8]{vietnam}
-\begin{document}
-\[500 \text{quả táo} \times 100 \text{quả cam} = \text{Siuuu}^2\]
-\end{document}
-```
-
-$$
-500 \text{quả táo} \times 100 \text{quả cam} = \text{Siuuu}^2
-$$
-
-Người dùng có thể thấy từ quả táo sẽ bị dính liền với số 500, còn từ quả cam cũng sẽ bị dính liền với số 100. Dù người dùng đã phím cách tạo khoảng trống giữa các số với lệnh `\text` tương ứng.  
-
-Để khắc phục được điều này, người dùng chỉ cần nhấn phím cách văn bản trong lệnh `\text` so với dấu `{`  
-
-```latex
-\documentclass{article}
-\usepackage{amsmath}
-\usepackage[utf8]{vietnam}
-\begin{document}
-\[500 \text{ quả táo} \times 100 \text{ quả cam} = \text{Siuuu}^2\]
-\end{document}
-```
-
-$$
-500 \text{ quả táo} \times 100 \text{ quả cam} = \text{Siuuu}^2
-$$
-
-Chỉnh sửa lại ở phần [[Lecture notes]] phần ví dụ mở đầu. [^1]
-
-```latex
-\documentclass{letter}
-\usepackage[utf8]{vietnam}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm} 
-\theoremstyle{definition}
-\newtheorem*{definition}{Định nghĩa}
-\begin{document}
-\begin{definition}
-    Cho \(c, d \in \mathbb{R}, c \neq d\) (thường lấy \(c=1 \ \text{và} \ d = 0\)). Hàm Dirichlet được định nghĩa bởi: 
-    \[
-    D(x) = 
-        \begin{cases}
-        c \quad nếu \ x \in \mathbb{Q}\\ 
-        d \quad nếu \ x \notin \mathbb{Q} 
-        \end{cases}
-    \]
-    và không liên tục ở mọi nơi. Hàm Dirichlet có thể được viết dưới dạng giải tích như sau:
-    \[
-    D(x) = \lim\limits_{m \to \infty} \lim\limits_{n \to \infty} \cos^{2n}(m! \pi x)
-    \]
-\end{definition}
-\end{document}
-```
-
-Người dùng có thể thấy, từ "nếu" được viết vào bên trong môi trường toán học sẽ bị in nghiêng. 
-
-. . . (Hướng dẫn sử dụng lệnh `\text`) 
-
-```latex
-\documentclass{letter}
-\usepackage[utf8]{vietnam}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm} 
-\theoremstyle{definition}
-\newtheorem*{definition}{Định nghĩa}
-\begin{document}
-\begin{definition}
-    Cho \(c, d \in \mathbb{R}, c \neq d\) (thường lấy \(c=1 \ \text{và} \ d = 0\)). Hàm Dirichlet được định nghĩa bởi: 
-    \[
-    D(x) = 
-        \begin{cases}
-        c \quad \text{nếu} \ x \in \mathbb{Q}\\ 
-        d \quad \text{nếu} \ x \notin \mathbb{Q} 
-        \end{cases}
-    \]
-    và không liên tục ở mọi nơi. Hàm Dirichlet có thể được viết dưới dạng giải tích như sau:
-    \[
-    D(x) = \lim\limits_{m \to \infty} \lim\limits_{n \to \infty} \cos^{2n}(m! \pi x)
-    \]
-\end{definition}
-\end{document}
-```
-
-<div align="center">
-	
-<img src="LaTeX-Library-project-v1.0.0/Draft/draft img/Dirichlet.jpg">
-
-Nhà toán học người Đức Johann Peter Gustav Lejeune Dirichlet
-
-</div>
-
-
-
 --- 
 
 ## In đậm chữ cái Hy Lạp
@@ -591,7 +487,62 @@ Câu hỏi 2: Đối với việc có cả subsection bên trong cả section.
 
 Nơi đây chứa tạp nhám các loại toán học, sau đó mới phân loại sau. 
 
-Tổng hợp tại đây: https://www.overleaf.com/read/cvrzxtfnpxvk#5bc02f 
+```tex
+\documentclass{letter}
+\usepackage[utf8]{vietnam}
+\usepackage{mathtools}
+\begin{document}
+
+\(a', a'', a'''''''\)
+
+\(\grave{a}\) 
+
+\(\acute{a}\)
+
+\(\check{a}\)
+
+\(\breve{a}\) 
+
+\(\tilde{a}\)
+
+\(\not{a}\)
+
+\(\dot{a}, \ddot{a}\)
+
+\(\underline{a}\), \underline{a} 
+
+\(\widetilde{AAA}\)
+
+\(\stackrel\frown{AAA}\)
+
+\(\overleftarrow{AB}\)
+
+\_ Tích có hướng (?): 
+
+\(\hat{x}\)
+
+\_ Số phức liên hơp: 
+
++ \(\bar{z} = a - bi\)
+
++ \(\overline{z_1} = a_1 - b_1 i\) 
+
+\_ Góc 
+
++ \(\widehat{O_1}\)
+
++ \(\widehat{\mathrm{ABC}}\)
+
+\_ Vector
+
++ \(\vec{x}\) 
+
++ \(\vec{AB}\), \(\overrightarrow{AB}\)
+
+
+
+\end{document}
+```
 
 ---
 
