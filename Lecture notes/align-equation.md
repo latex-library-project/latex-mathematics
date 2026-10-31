@@ -487,6 +487,133 @@ Vậy đâu là sự khác nhau giữa môi trường `align*` và môi trườn
 
 ---
 
+## Mở rộng bài học: 
+
+### Lồng môi trường ... vào môi trường . . . : 
+
+. . . 
+
+### Văn bản trong . . . 
+
+(thay bằng một ví dụ mới sau)
+
+Với việc triển khai liên tục phép tính, thay vì 
+
+```tex
+\documentclass{article} 
+
+\usepackage{amsmath}
+
+\begin{document}
+
+If
+\begin{align*}
+    A &= \sigma_1+\sigma_2\\
+    B &= \rho_1+\rho_2\\
+\end{align*} 
+
+then  
+\[
+  C(x) = e^{Ax^2+\pi}+B  
+\]
+
+\end{document}
+```
+
+có một cách khác để tinh gọn hơn cho đoạn mã trên. 
+
+Chúng ta sẽ thực hiện điều này, bên trong môi trường `align*` ở ví dụ trên. 
+
+Để viết văn bản bên trong môi trường toán học, thông thường ta sẽ nghĩ đến việc sử dụng lệnh `\text`. 
+
+```tex
+\begin{align*}
+    \text{If}
+       A &= \sigma_1+\sigma_2\\
+       B &= \rho_1+\rho_2\\
+    \text{then}
+    C(x) &= e^{Ax^2+\pi}+B
+\end{align*} 
+```
+
+Cách mới này, văn bản sẽ được đưa vào trong lệnh mới: 
+
+```tex
+\intertext{}
+```
+
+Điều này có nghĩa là . . . 
+
+
+```tex
+\documentclass{article} 
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{align*}
+    \intertext{If}
+       A &= \sigma_1+\sigma_2\\
+       B &= \rho_1+\rho_2\\
+    \intertext{then}
+    C(x) &= e^{Ax^2+\pi}+B
+\end{align*} 
+
+\end{document}
+```
+
+Kết quả cho ra được sẽ là: 
+
+If
+
+$$
+\begin{align*}
+    A &= \sigma_1+\sigma_2\\
+    B &= \rho_1+\rho_2\\
+\end{align*} 
+$$
+
+then 
+
+$$
+    C(x) = e^{Ax^2+\pi}+B
+$$
+
+Để có thể không tạo khoảng trắng giữa hai dòng từ then và phần toán học trên, ta sẽ thay lệnh `intertext` bằng lệnh: 
+
+```tex
+\shortintertext{}
+```
+
+Để sử dụng lệnh này, người dùng cần phải khai báo package là `mathtools`. 
+
+```tex
+\documentclass{article} 
+
+\usepackage{mathtools}
+
+\begin{document}
+
+\begin{align*}
+    \shortintertext{If}
+       A &= \sigma_1+\sigma_2\\
+       B &= \rho_1+\rho_2\\
+    \shortintertext{then}
+    C(x) &= e^{Ax^2+\pi}+B
+\end{align*} 
+
+\end{document}
+```
+
+Ta có thể thấy được rằng, so với việc sử dụng lệnh `\intertext`, thì lệnh `shortintertext` đã khắc được điều mà người viết đã nêu vấn đề ở trên. 
+
+(? . . . Ảnh so sánh hai lệnh `\intertext` và `shortintertext`)
+
+Vậy khi nào thì ta nên và không nên sử dụng cách này ? 
+
+---
+
 ## Câu hỏi: 
 
 + Một dấu `&` là một lần giúp ta biết rằng sẽ tạo ra cột mới và khoảng cách giữa chúng được mở rộng ra. Tuy vậy, nếu như để `&` kết hợp với dấu `=`, các lệnh [khoảng cách trong toán học](/Lecture%20notes/Khoảng%20cách%20trong%20chế%20độ%20toán%20học.md), thì khoảng cách này được thu hẹp lại. Vì sao lại có sự khác biệt này nhỉ ? 

@@ -1,3 +1,4 @@
+## Bài học: 
 
 Khi viết văn bản trong toán học, chẳng hạn . . . (nên viết lại thành một vấn đề ví dụ mới)
 
@@ -69,4 +70,5 @@ Với một số hàm toán học đã được LaTeX cung cấp . . ., nếu nh
 \[\nam\]
 ```
 
-Người dùng có thể xem đầy đủ các hàm được LaTeX . . . (? LaTeX làm sao) tại [danh sách các kí hiệu toán học, chữ cái Hy Lạp]().  
+Người dùng có thể xem đầy đủ các kí hiệu được LaTeX cài đặt sẵn . . . (? LaTeX làm sao) tại [danh sách các kí hiệu toán học, chữ cái Hy Lạp](). 
+
