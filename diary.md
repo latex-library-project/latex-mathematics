@@ -61,4 +61,11 @@ Sau đó mới đưa về chung cả đoạn mã lớn.
 	\end{document}
 ```
 
-Thì đây chính là vấn đề mà mình nêu lên và cần chỉnh sửa lại ở các bài viết. 
+Thì đây chính là vấn đề mà mình nêu lên và cần chỉnh sửa lại ở các bài viết.  
+
+
+# 2026-11-31: 
+
+Plain TeX, ConTeXt, XeTeX, LuaTeX, fonts, graphics, ..vv.. 
+
+Chúng là gì ? ... Một số câu hỏi khác để tìm hiểu các vấn đề trên. 

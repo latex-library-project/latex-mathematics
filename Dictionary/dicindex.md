@@ -1,6 +1,6 @@
 **Câu hỏi 1**: Thế nào là phương trình toán học ?   
 
-Đây là câu hỏi hay và cũng đáng để ta ôn lại 
+Đây là câu hỏi hay và cũng đáng để ta ôn lại. 
 
 **Câu hỏi 2**: AMS là gì ? 
 
@@ -21,6 +21,7 @@ _ AMS: American Mathematical Society (Hiệp hội toán học Hoa Kỳ) là m�
 <div align="center">
 	<img src="./Diary/assumptions.jpg" alt="assumptions">
 </div>
+
 <center>nguồn: https://turan-edu.uz/media/books/2024/05/28/1664976801.pdf</center>
 
 + Hệ quả (corollary): 
