@@ -27,10 +27,10 @@ Nguồn: https://thomaskojar.wordpress.com/2021/05/13/history-of-math-symbols/
 </div>
 
 $$
-\sum^{100}_{n = 1} k = 5050 
+\sum^{100}_{n = 1} n = 5050 
 $$
 
-**inline math**
+#### inline math
 
 ```latex
 \(\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s}\)
@@ -38,7 +38,7 @@ $$
 
 $\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s}$
 
-Hoặc có thể thêm lệnh 
+Để có thể căn chỉnh kí hiệu tổng sao cho đẹp, ta có thể sử dụng lệnh: 
 
 ```latex
 \displaystyle
@@ -46,13 +46,73 @@ Hoặc có thể thêm lệnh
 
 vào trước lệnh `\sum`
 
-```latex
+```tex
+\documentclass{article}
+
+\begin{document}
+
 \(\zeta(s) = \displaystyle\sum_{n=1}^{\infty} \frac{1}{n^s}\)
+
+\end{document}
 ```
 
 $\zeta(s) = \displaystyle\sum_{n=1}^{\infty} \frac{1}{n^s}$  
 
-**display math**
+Ngoài lệnh `\displaystyle` để căn chỉnh trên ta còn có các lệnh sau: 
+
+|Lệnh|Mô tả|Ghi chú thêm|
+|:---|:----|:-----------| 
+|`\textstyle`|Kích thước dành cho các phương trình được viết ở chế độ toán học **inline math**|Vì kích thước của chúng đã hệ thống mặc định như ban đầu, nên ta không cần phải sử dụng trong việc viết chúng trong toán học ở chế độ| 
+
+Để dễ hình dung, ta quay lại với ví dụ ban đầu, nếu ta thêm lệnh `textstyle`: 
+
+```tex
+\documentclass{article}
+
+\begin{document}
+
+\(\zeta(s) = \textstyle\sum_{n=1}^{\infty} \frac{1}{n^s}\)
+
+\end{document}
+```
+
+Kết quả cho ra được cũng ra giống hệt với lúc ban đầu:  
+
+$\zeta(s) = \textstyle\sum_{n=1}^{\infty} \frac{1}{n^s}$  
+
+Vậy nên ta chỉ cần viết như cách ban đầu là được, mà không cần phải sử dụng lệnh `\textstyle`. 
+
+**Câu hỏi**: Vậy lệnh `\textstyle` nên được sử dụng vào lúc nào ? 
+
+Nếu chúng ta viết một đoạn văn dài, có chứa bên trong đoạn văn công thức tổng sử dụng lệnh `\displaystyle`, chẳng hạn như ví dụ sau: 
+
+```tex
+\documentclass{article}
+
+\begin{document}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas
+\(
+     \displaystyle\sum^{100}_{n = 1} k = 5050 
+\)
+Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna.Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas
+
+\end{document}
+```
+
+Có thể thấy, một khoảng cách rộng giữa dòng trong đoạn văn bản chứa kí hiệu tổng sử dụng lệnh `\displaystyle` và dòng không chứa kí hiệu tổng đó. 
+
+**Câu hỏi**: Điều này làm ảnh hưởng gì đến với người đọc ?
+
+**Câu hỏi**: Làm thế nào để giải quyết vấn đề trên ?
+
+. . .
+
+Vấn đề này bạn cũng sẽ gặp rất nhiều đối với các bài học . . . (? gồm những phần bài học nào có gặp vấn đề trên)
+
+---
+
+#### display math
 
 ```latex
 \[\zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s}\]
@@ -69,15 +129,17 @@ $$
 $$
 . . . (đọc đầy đủ định lý ở đây https://pkg.yihui.org/bookdown/markdown-extensions-by-bookdown#theorems) 
 
-Từ những kiến thức đã trình bày về cách viết kí hiệu tổng trên, ta viết gọn lại bài toán tổng ở đầu bài như  sau: 
+Từ những kiến thức đã trình bày ở trên về cách viết kí hiệu tổng trên, ta viết gọn lại bài toán tổng ở đầu bài như sau: 
 
 ```latex
 \[\sum_{n = 1}^{100} = 5050\]
 ```
 
 $$
-\sum^{100}_{n = 1} k = 5050 
+\sum^{100}_{n = 1} n = 5050 
 $$
+
+---
 
 ### Tích phân 
 
