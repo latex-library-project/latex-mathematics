@@ -188,10 +188,182 @@ $$
 
 #### Mở rộng: 
 
+Primed sum operator (tạm dịch là Toán tử tổng có phẩy) được kí hiệu là $\sum\nolimits '$. 
 
+Về kí hiệu `'`, xem qua lại phần bài học kí hiệu (? bài học nào cơ).
+
+Đối với **inline math**: $\sum\nolimits '$. 
+
+Đối với **display math**: 
+
+$$
+\sum\nolimits '
+$$
+
+Đối với tổng không có điều kiện, ta sẽ kết hợp với lệnh 
+
+```tex
+\nolimits
+```
+
+được sử dụng bên cạnh lệnh `\sum`. 
+
+Đoạn mã: 
+
+```tex
+\[
+     \sum\nolimits '
+\]
+```
+
+
+**Câu hỏi**: Lệnh `\nolimits` này có phải đối nghịch của lệnh `\limits` mà ta đã sử dụng ở bài học toán [giới hạn](/Lecture%20notes/Caculus/lim.md) hay không ?
+
+Với tổng có điều kiện, ta không nên sử dụng lệnh `\nolimts` khi viết ở chế độ toán học **display math**, để dễ hình dung, ta xem qua ví dụ sau (thay bằng một ví dụ toán học tốt sau):
+
+```tex
+\sum\nolimits'_{n<k,\;\text{$n$ odd}} nE_n
+```
+
+Kết quả hiện thị sẽ là: 
+
+$$
+    \sum\nolimits'_{n<k,\;\text{$n$ odd}} nE_n
+$$
+
+Có thể thấy, lúc này điều kiện của hàm tổng đang ở dạng (? thay câu từ chuẩn lại) sẽ là `\textstyle`. 
+
+Để khắc phục được điều này, ta sẽ sử dụng một lệnh mới là 
+
+```tex
+\sideset{}{}
+```
+
+(? phân tích lệnh này cho người dùng hình dung) 
+
+Lệnh này không được hệ thống cài đặt sẵn, mà phải khai báo package **amsmath**, thì mới có thể sử dụng được lệnh này. 
+
+Lệnh này phải được đặt trước lệnh `\sum`. 
+
+Sửa lại đoạn mã trên 
+
+```tex
+\sideset{}{'}\sum_{n<k,\;\text{$n$ odd}} nE_n
+```
+
+lúc này ta được: 
+
+$$
+     \sideset{}{'}\sum_{n<k,\;\text{$n$ odd}} nE_n
+$$
+
+Nếu ta không viết lệnh `\sideset` trước lệnh `\sum` thì hệ thống sẽ báo lỗi . . . (? gồm những lỗi gì) 
+
+
+Trong một số tài liệu toán, chẳng hạn như bài báo . . . (? bài báo nào chỉ điểm đến nguồn giúp) 
+
+(? ảnh từ bài bào đó)
+
+khi soạn thảo latex, nếu không cần quá chu tâm nhiều đến việc căn chỉnh phải nhớ những lệnh trên, mà chọn một giải pháp đơn giản hơn như sau: (viết ví dụ tạm thời đây, sau đó viết cái mới sau)
+
+```tex
+\[
+     \sum_{n<k,\;\text{$n$ odd}}' nE_n
+\]
+```
+
+kết quả hiển thị sẽ là
+
+
+$$
+    \sum_{n<k,\;\text{$n$ odd}}' nE_n
+$$
+
+Lúc này mặc định dấu `'` sẽ nằm ở chỉ số trên kí hiệu tổng. 
+
+Vậy nên, nếu ta viết kí hiệu chỉ số trên thêm, 
+
+```tex
+\[
+     \sum_{n<k,\;\text{$n$ odd}}^{1} ' nE_n
+\]
+```
+
+thì hệ thống sẽ báo lỗi **Double superscript**. 
+
+Điều này, khi xét về mặt toán học cũng hoàn toàn đúng về ý nghĩa kí hiệu của chúng. (? xác nhận lại quan điểm này và giải thích thêm về chúng thay vì chỉ đưa ra nhanh chóng kết luận, mà không đưa ra thêm giải thích). 
+
+
+Nếu người dùng sử dụng lệnh `\subset{}{}` để sửa: 
+
+```tex
+\[
+    \subset{}{'} \sum_{k=1}^1 C_n
+\]
+```
+
+thì người dùng có thể thấy, về mặt câu lệnh latex, thì hệ thống sẽ xác nhận là hoàn toàn chính xác. Với lệnh `\subset` lúc này đang được hệ thống hiểu là kí hiệu tập con (xem qua lại ở bài học [kí hiệu]() (? bài học nào đây cháu bé)), dấu `'` được hiển thị bên bên trong phương trình, dù được bao bởi dấu ngoặc nhọn, nhưng vì không phải lệnh để hiển thị dấu ngoặc trong tài liệu, nên nó không hiển thị trên trang tài liệu. Còn lệnh `\sum` được viết với điều kiện trên và dưới hoàn toàn hợp lệ với những gì mà ta đã học ở phần trên. (? mô tả hơi loạn, cần đọc và sửa lại)  
+
+Nhưng chúng vẫn sẽ là không chính xác về mặt toán học về kí hiệu toán tử tổng có dấu phẩy mà ta đang được học. (? mô tả hơi loạn, cần đọc và sửa lại)
 
 ---
 
 ## Câu hỏi: 
 
 **Câu hỏi 1**: Tại lại là lệnh `\sum` mà không phải là lệnh `\Sigma`, để viết kí hiệu tổng (sigma). 
+
+--- 
+
+## Bổ sung: 
+
+Sử dụng lệnh 
+
+```tex
+\atop
+```
+
+để viết điều kiện dài thay vì trên cùng một dòng, thì có thể phân cách qua dấu `,`.  
+
+ví dụ: 
+
+```tex
+{\displaystyle s(n)=\sum _{{d|n,} \atop {d\neq n}}d\,.} 
+```
+
+kết quả: 
+
+$$
+{\displaystyle s(n)=\sum _{{d|n,} \atop {d\neq n}}d\,.}
+$$
+
+tham khảo từ trang wiki: 
+
+https://en.wikipedia.org/wiki/Aliquot_sum và https://wikimedia.org/api/rest_v1/media/math/render/svg/efef3d606e4f16796b5fed1270794af51abf52f3 
+
+Để viết nhiều điều kiện (? thuật ngữ chuẩn chưa nhỉ) cùng một lúc, ta sẽ sử dụng lệnh: 
+
+```tex
+\substack{}
+```.
+
+Ví dụ: (thay bằng một ví dụ mới sau) 
+
+```tex
+\[
+     \prod_{\substack{
+               1\le i \le n\\
+               1\le j \le m}
+          }
+          M_{i,j}
+\]
+```
+
+Kết quả hiển thị: 
+
+$$
+\prod_{\substack{
+            1\le i \le n\\
+            1\le j \le m}
+     }
+     M_{i,j}
+$$ 

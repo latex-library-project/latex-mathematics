@@ -626,4 +626,10 @@ Vậy khi nào thì ta nên và không nên sử dụng cách này ?
 
 https://www.tug.org/pracjourn/2006-4/madsen/)
 
-+ Sự khác nhau giữa môi trường `align*` và môi trường `split`. 
++ Sự khác nhau giữa môi trường `align*` và môi trường `split`.  
+
+--- 
+
+## Thực hành gõ lệnh: 
+
+https://arxiv.org/pdf/2111.02795v1 (tham khảo triển khai phương trình trang 4)
