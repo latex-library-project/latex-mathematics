@@ -272,7 +272,7 @@ giải thích . . . (? chưa viết)
 
 + Tìm phản ví dụ cho việc sử dụng lệnh `align*` lại ổn hơn việc sử dụng `alignat`. 
 
-Câu hỏi: Vậy khi nào thì nên sử dụng lệnh `align`, thay vì lệnh `alignat` và ngược lại. Đâu là trường hợp mà bạn có thể sử dụng một trong hai mà không cần phải phân vân nên ưu tiên lệnh này hơn so với lệnh kia ? 
+**Câu hỏi**: Vậy khi nào thì nên sử dụng lệnh `align`, thay vì lệnh `alignat` và ngược lại. Đâu là trường hợp mà bạn có thể sử dụng một trong hai mà không cần phải phân vân nên ưu tiên lệnh này hơn so với lệnh kia ? 
 
 ---
 
@@ -419,7 +419,41 @@ $$
 
 ### Môi trường `split`: 
 
-+ Môi trường `split` giúp khai triển đẳng thức đáng nhớ căn bản sau:  
+Ta có thể sử dụng môi trường `align*` để khai triển hằng đẳng thức đánh nhớ sau: 
+
+```tex
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{align*}
+    (a+b)^2 &= (a+b) \cdot (a+b) \\
+            &= a \cdot (a+b) + b \cdot (a+b) \\
+            &= a^2 + ab + ba + b^2 \\
+            &= a^2 +2ab + b^2
+\end{align*}
+
+\end{document}
+```
+
+Kết quả cho ra được sẽ là: 
+
+$$
+\begin{align*}
+    (a+b)^2 &= (a+b) \cdot (a+b) \\
+            &= a \cdot (a+b) + b \cdot (a+b) \\
+            &= a^2 + ab + ba + b^2 \\
+            &= a^2 +2ab + b^2
+\end{align*}
+$$
+
++ Một cách khác để viết khai triển trên là sử dụng một môi trường mới có tên là `split`. 
+
+Môi trường này không được cài đặt sẵn mặc định, mà phải khai báo thêm package **amsmath**. 
+
+Bên cạnh đó, môi trường này không được sử dụng độc lập như các môi trường khác, mà phải được viết trong lệnh hoặc môi trường viết toán học ở chế độ **display math**. 
 
 (nháp. . .chẳng hạn như ví dụ ở sau đây (? thay bằng một ví dụ khác về khai triển $a^n + b^n$  và ví sao không có công thức $a^2 + b^2$))   
 
@@ -442,7 +476,7 @@ $$
 \end{document}
 ```
 
-Kết quả cho ra được sẽ là: 
+Kết quả hiển thị cũng sẽ cho ra được cũng tương tự như việc người dùng sử dụng môi trường `split`: : 
 
 $$
 \begin{split}
@@ -451,36 +485,6 @@ $$
             &= a^2 + ab + ba + b^2 \\
             &= a^2 +2ab + b^2
 \end{split}
-$$
-
-Ta cũng có thể sử dụng môi trường `align*` để khai triển hằng đẳng thức đánh nhớ trên: 
-
-```tex
-\documentclass{article}
-
-\usepackage{amsmath}
-
-\begin{document}
-
-\begin{align*}
-    (a+b)^2 &= (a+b) \cdot (a+b) \\
-            &= a \cdot (a+b) + b \cdot (a+b) \\
-            &= a^2 + ab + ba + b^2 \\
-            &= a^2 +2ab + b^2
-\end{align*}
-
-\end{document}
-```
-
-Kết quả cho ra được cũng sẽ tương tự như việc người dùng sử dụng môi trường `split`: 
-
-$$
-\begin{align*}
-    (a+b)^2 &= (a+b) \cdot (a+b) \\
-            &= a \cdot (a+b) + b \cdot (a+b) \\
-            &= a^2 + ab + ba + b^2 \\
-            &= a^2 +2ab + b^2
-\end{align*}
 $$
 
 Vậy đâu là sự khác nhau giữa môi trường `align*` và môi trường `split` ?
