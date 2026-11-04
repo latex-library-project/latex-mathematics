@@ -10,7 +10,7 @@ Kí hiệu: $a \equiv b \pmod{m}$
 
 + Dấu bằng có ba gạch ngang (? tạm thời để vậy, nên kiểm tra lại tên gọi thuật ngữ chính xác) $\equiv$, được viết trong latex là `\equiv`. Có thể tra lại ở bài học [kí từ]() (? có bài học này trong đây luôn cơ à).  
 
-Sử dụng lệnh: 
+Để viết toán tử đồng dư thức, ta sử dụng lệnh: 
 
 ```tex
 \pmod
@@ -35,7 +35,7 @@ Ví dụ về đồng dư thức được viết ở chế độ toán học dis
 Định lý Wilson. Nếu $p$ là một số nguyên tố thì 
 
 $$
-(p-1)! + 1 \equiv 0 \pmod{p}
+(p-1)! \equiv -1 \pmod{p}
 $$
 
 Viết biểu thức trên vào trong soạn thảo latex: 
@@ -46,7 +46,7 @@ Viết biểu thức trên vào trong soạn thảo latex:
 \begin{document}
 
 \[
-    (p-1)! + 1 \equiv 0 \pmod{p}
+    (p-1)! \equiv -1 \pmod{p}
 \]
 
 \end{document}
