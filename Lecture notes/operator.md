@@ -1,6 +1,73 @@
-# Bài học: 
+## Dàn ý: 
 
-## Toán tử lượng giác 
+là gì ? được biểu diễn thành kí hiệu như thế nào ? đọc như nào ?  khi nào ? 
+
+## Bài học: 
+
+Các toán tử cơ bản: 
+
+\+ Các dấu +, -, /, = có thể được nhập trực tiếp bàn phím. 
+\+ Dấu $\times$ được viết ở LaTeX sẽ là 
+
+```latex
+\times
+```
+
+\+ Dấu $\cdot$ được viết ở LaTeX là 
+
+```latex
+\cdot
+```
+
+\+ Dấu $\div$ được viết ở LaTeX là 
+
+```latex
+\div
+```
+
+\+ Một số toán tử nhị phân (Binary Operators) 
+
+```latex
+\otimes, \oplus, \cup, \cap
+```
+
+$\otimes, \ \oplus, \ \cup, \ \cap$
+
+\+ Một số toán tử quan hệ (Relation Operators)
+
+Dấu <, > có thể được nhập trực tiếp trên bàn phím 
+
+Dấu $\leq, \ \geq, \ \neq$
+
+```latex
+\leq, \geq, \neq
+```
+
+Dấu $\subset, \ \supset, \ \subseteq, \ \supseteq$
+
+```latex
+\subset, \supset, \subseteq, \supseteq
+```
+
+Dấu $\in, \ \notin$
+
+```latex
+\in, \notin
+```
+
+Dấu $\ \approx, \simeq, \ \cong, \ \equiv, \ \vee, \ \wedge, \ \perp$
+
+```latex
+\approx, \simeq, \cong, \equiv, \vee, \wedge, \perp
+```
+
+Dấu $\boxtimes, \Box$
+
+```latex
+\boxtimes, \Box
+```
+
+### Toán tử lượng giác 
 
 ```latex
 \documentclass{article}
@@ -19,7 +86,7 @@ $\cos(x), \ \sin(x), \ \tan(x), \ \cot(x), ..vv..$
 
 ---
 
-## Toán tử hàm mũ 
+### Toán tử hàm mũ 
 
 . . . (định nghĩa hàm số mũ) 
 ```latex
