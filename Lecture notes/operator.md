@@ -256,12 +256,67 @@ $$
 \end{document}
 ```
 
+Điều này cũng tương tự đối với toán tử là $\operatorname{argmin}$. 
+
 $$
     \operatorname{argmax}_S f \coloneqq 
     \operatorname*{argmax}_{x \in S} f(x) \coloneqq 
     \{x \in S : f(s) \leq f(x) \text{ for all } s \in S\}
 $$
 
+
+. . . (từ ví dụ trên, ta thấy lệnh `operatorname*{}` này còn giúp chúng ta nhóm điều kiện lại chung với toán tử nếu viết tách biệt . . .)[^second]
+
+```tex
+\documentclass{article}
+
+\usepackage{mathtools}
+
+\begin{document}
+
+\[
+    \operatorname*{limsup}_{n \to \infty} x_n \coloneqq  
+    \lim_{n \to \infty} \left(\sup_{m \geq n} x_n \right)
+\]
+
+\end{document}
+```
+
+$$
+    \operatorname*{limsup}_{n \to \infty} x_n \coloneqq  
+    \lim_{n \to \infty} \left(\sup_{m \geq n} x_n \right)
+$$
+
+Tuy vậy, để cho toán tử giới hạn (lim) và toán tử supremum (sup) không bị dính liền, ta sẽ sử dụng [lệnh khoảng cách trong chế độ toán học]() nhỏ nhất với giá trị dương là `\,`: 
+
+```tex
+\operatorname*{lim \, sup} . . . 
+```
+
+Ta viết đầy đủ lại đoạn mã trên: 
+
+```tex
+\documentclass{article}
+
+\usepackage{mathtools}
+
+\begin{document}
+
+\[
+    \operatorname*{lim \, sup}_{n \to \infty} x_n \coloneqq  
+    \lim_{n \to \infty} \left(\sup_{m \geq n} x_n \right)
+\]
+
+\end{document}
+```
+
+$$
+    \operatorname*{lim \, sup}_{n \to \infty} x_n \coloneqq  
+    \lim_{n \to \infty} \left(\sup_{m \geq n} x_n \right)
+$$
+
 ---
 
 [^first]: Tham khảo từ trang wiki https://en.wikipedia.org/wiki/Arg_max 
+
+[^second]: Tham khảo từ trang wiki https://en.wikipedia.org/wiki/Limit_inferior_and_limit_superior#Definition_for_sequences
