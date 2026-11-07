@@ -130,3 +130,138 @@ Hàm  $y = \mathrm{e}^x$ của x này còn được viết tắt lại thành $y
 ```
 
 $y = \exp(x)$ 
+
+### Mở rộng:
+
+arguments of the maxima (viết tắt lại là argmax) . . . (? nó là gì nhỉ, trong lĩnh vực nào của toán học nhỉ)
+
+Nếu viết thông thường trong LaTeX[^first]
+
+```tex
+\documentclass{article}
+
+\usepackage{mathtools}
+
+\begin{document}
+
+\[
+    \arg \max {}_S f \coloneqq \{x \in S : f(x) = \sup {}_S f\}
+\]
+
+\end{document}
+```
+
+Kết quả hiển thị: 
+
+$$
+    \arg \max {}_S f \coloneqq \{x \in S : f(x) = \sup {}_S f\}
+$$
+
+Ta thấy kí hiệu $\operatorname{argmax}$ không được viết dính liền. 
+
+Để làm được điều này, ta sẽ sử dụng lệnh mới: 
+
+```tex
+\operatorname{}
+```
+
+Lệnh này giúp ta tạo một toán tử mới, nếu như toán tử ấy chưa được LaTeX định nghĩa sẵn, hoặc ở bất kì package nào khác. 
+
+Ta sẽ sửa lại đoạn mã trên như sau: 
+
+```tex
+\documentclass{article}
+
+\usepackage{mathtools} % để định nghĩa lệnh \coloneqq
+
+\begin{document}
+
+\[
+    \operatorname{argmax} {}_S f \coloneqq \{x \in S : f(x) = \sup {}_S f\}
+\]
+
+\end{document}
+```
+
+Kết quả cho ra được lúc này sẽ là: 
+
+$$
+    \operatorname{argmax} {}_S f \coloneqq \{x \in S : f(x) = \sup {}_S f\}
+$$
+
+Nếu như ta không thêm cặp dấu ngoặc nhọn vào trước lệnh viết [chỉ số dưới](): 
+
+```tex
+\documentclass{article}
+
+\usepackage{mathtools} % để định nghĩa lệnh \coloneqq
+
+\begin{document}
+
+\[
+    \operatorname{argmax}_S f \coloneqq \{x \in S : f(x) = \sup _S f\}
+\]
+
+\end{document}
+```
+
+Ta sẽ thấy 
+
+$$
+    \operatorname{argmax}_S f \coloneqq \{x \in S : f(x) = \sup _S f\}
+$$
+
+. . . (nếu ta viết thông thường)
+
+```tex
+\documentclass{article}
+
+\usepackage{mathtools} % để định nghĩa lệnh \coloneqq
+
+\begin{document}
+
+\[
+    \operatorname{argmax}_S f \coloneqq 
+    \operatorname{argmax}_{x \in S} f(x) \coloneqq 
+    \{x \in S : f(s) \leq f(x) \text{ for all } s \in S\}
+\]
+
+\end{document}
+```
+$$
+    \operatorname{argmax}_S f \coloneqq 
+    \operatorname{argmax}_{x \in S} f(x) \coloneqq 
+    \{x \in S : f(s) \leq f(x) \text{ for all } s \in S\}
+$$
+
+. . . (bằng cách sử dụng lệnh `\operatorname` ở trên và có thêm dấu *, cụ thể: 
+```tex
+\operatorname*{}
+```
+)
+
+```tex
+\documentclass{article}
+
+\usepackage{mathtools} % để định nghĩa lệnh \coloneqq
+
+\begin{document}
+
+\[
+    \operatorname{argmax}_S f \coloneqq 
+    \operatorname*{argmax}_{x \in S} f(x) \coloneqq 
+    \{x \in S : f(s) \leq f(x) \text{ for all } s \in S\}
+\]
+
+\end{document}
+```
+
+$$
+    \operatorname{argmax}_S f \coloneqq 
+    \operatorname*{argmax}_{x \in S} f(x) \coloneqq 
+    \{x \in S : f(s) \leq f(x) \text{ for all } s \in S\}
+$$
+
+---
+
+[^first]: Tham khảo từ trang wiki https://en.wikipedia.org/wiki/Arg_max 
