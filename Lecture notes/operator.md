@@ -131,7 +131,62 @@ Hàm  $y = \mathrm{e}^x$ của x này còn được viết tắt lại thành $y
 
 $y = \exp(x)$ 
 
+---
+
 ### Mở rộng:
+
+Sẽ có một vài trường hợp một vài kí hiệu sẽ không được hệ thống cài đặt sẵn mặc định hay thông qua các package khác. Chẳng hạn, ta cùng nhau xem qua ví dụ công thức Leibniz để tính định thức sau: 
+
+```tex 
+\documentclass{article}
+
+\begin{document}
+
+\[
+\det(A) = \sum_{\sigma \in S_n} sgn(\sigma) \prod_{k = 1}^{n} \left (a_{k\sigma(k)}\right )
+\]
+
+\end{document}
+```
+
+$$
+\det(A) = \sum_{\sigma \in S_n} sgn(\sigma) \prod_{k = 1}^{n} \left (a_{k\sigma(k)}\right )
+$$
+
+Ở đây, ta thấy dấu của phép thế (được kí hiệu sgn) đang được để mặc định thông thường, nên sẽ bị in nghiêng. 
+
+
+Vì LaTeX không cài đặt kí hiệu dấu của phép thế sẵn, cũng như là các package khác, mà thay vào đó ta sẽ thông qua lệnh mới là
+
+```tex
+\operatorname{}
+```
+
+Lệnh này giúp ta tạo một toán tử hoặc một kí hiệu toán học mới, nếu như toán tử hoặc kí hiệu toán học ấy chưa được LaTeX định nghĩa sẵn, hoặc ở bất kì package nào khác. 
+
+Để sử dụng được lệnh `\operatorname{}`, ta cần phải khai báo package là **amsmath** hoặc package là **mathtools**. 
+
+**Câu hỏi (toán học)**: Dấu của phép thế (sgn) có phải là một toán tử ? 
+
+```tex
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\[
+\det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \prod_{k = 1}^{n} \left (a_{k\sigma(k)}\right )
+\]
+
+\end{document}
+```
+
+$$
+\det(A) = \sum_{\sigma \in S_n} \operatorname{sgn} (\sigma) \prod_{k = 1}^{n} \left (a_{k\sigma(k)}\right )
+$$
+
+Lệnh `\operatorname` này cũng giúp chúng ta viết toán tử sau đây một cách vô cùng đơn giản. 
 
 arguments of the maxima (viết tắt lại là argmax) . . . (? nó là gì nhỉ, trong lĩnh vực nào của toán học nhỉ)
 
@@ -158,14 +213,6 @@ $$
 $$
 
 Ta thấy kí hiệu $\operatorname{argmax}$ không được viết dính liền. 
-
-Để làm được điều này, ta sẽ sử dụng lệnh mới: 
-
-```tex
-\operatorname{}
-```
-
-Lệnh này giúp ta tạo một toán tử mới, nếu như toán tử ấy chưa được LaTeX định nghĩa sẵn, hoặc ở bất kì package nào khác. 
 
 Ta sẽ sửa lại đoạn mã trên như sau: 
 
@@ -256,14 +303,17 @@ $$
 \end{document}
 ```
 
-Điều này cũng tương tự đối với toán tử là $\operatorname{argmin}$. 
-
 $$
     \operatorname{argmax}_S f \coloneqq 
     \operatorname*{argmax}_{x \in S} f(x) \coloneqq 
     \{x \in S : f(s) \leq f(x) \text{ for all } s \in S\}
 $$
 
+Điều này cũng tương tự đối với toán tử là $\operatorname{argmin}$. 
+
+### Hệ quả từ bài học mở rộng: 
+
+Một cách khác để nhóm điều kiện của $\lim \sup$ (? cách đọc sao nhỉ)
 
 . . . (từ ví dụ trên, ta thấy lệnh `operatorname*{}` này còn giúp chúng ta nhóm điều kiện lại chung với toán tử nếu viết tách biệt . . .)[^second]
 
