@@ -311,6 +311,8 @@ $$
 
 Điều này cũng tương tự đối với toán tử là $\operatorname{argmin}$. 
 
+---
+
 ### Hệ quả từ bài học mở rộng: 
 
 Một cách khác để nhóm điều kiện của $\lim \sup$ (? cách đọc sao nhỉ)
@@ -364,6 +366,33 @@ $$
     \operatorname*{lim \, sup}_{n \to \infty} x_n \coloneqq  
     \lim_{n \to \infty} \left(\sup_{m \geq n} x_n \right)
 $$
+
+
+Tuy vậy thì điều này không cần thiết, vì toán tử limit superior (tạm dịch là giới hạn trên) và limit inferior (tạm dịch là giới hạn dưới) đã được LaTeX định nghĩa sẵn: 
+
+```tex
+\documentclass{article}
+
+\usepackage{mathtools}
+
+\begin{document}
+
+\[
+    \limsup_{n \to \infty} x_n \coloneqq  
+    \lim_{n \to \infty} \left(\sup_{m \geq n} x_n \right)
+\]
+
+\end{document}
+```
+
+$$
+    \limsup_{n \to \infty} x_n \coloneqq  
+    \lim_{n \to \infty} \left(\sup_{m \geq n} x_n \right)
+$$
+
+nên là ta không cần phải sử dụng lệnh `\operatorname` trong trường hợp này. 
+
+Để giúp người dùng có thể xác định được đâu là toán tử đã được latex định nghĩa sẵn hay chưa, người dùng có thể tham khảo qua hai bảng phân loại hai điều kiện đây ở phần tổng hợp [kí hiệu]() (? bài học nào đây).   
 
 ---
 

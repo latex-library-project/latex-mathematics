@@ -33,13 +33,19 @@ hoặc sử dụng lệnh mới là `limits`:
 ```latex
 \documentclass{article}
 \begin{document}
-\(\lim\limits_{x \to \infty}\)
+\(
+\lim\limits_{x \to \infty}
+\)
 \end{document}
 ```
 
 mà kết quả cho ra được đều là giống hệt nhau: 
 
 $\lim\limits_{x \to \infty}$
+
+Lệnh `\limits` cũng rất hiệu quả trong việc nhóm điều kiện của toán tử limit superior (tạm dịch là giới hạn trên) và limit inferior (tạm dịch là giới hạn dưới). 
+
+$\limsup\limits_{n \to \infty}$ 
 
 Ví dụ về việc viết toán tử lim trong chế độ **display math** với bài toán giới hạn Basel: 
 
