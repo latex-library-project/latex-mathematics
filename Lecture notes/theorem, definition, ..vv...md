@@ -1,124 +1,108 @@
-. . .  (Dẫn dắt vào bài học và giới thiệu đôi nét các định nghĩa trên ở phần sau cuốn sách)   
+## Dàn ý: 
 
-Để viết được định lý, định nghĩa, ..vv.. trong soạn thảo LaTeX, trước tiên người dùng cần phải khai báo chúng vào lệnh 
+. . .  (Dẫn dắt vào bài học và giới thiệu đôi nét ý nghĩa của tiên đề, định nghĩa, định lý, ..vv.. ở phần sau cuốn sách, vì tất nhiên những phần này nên được tìm hiểu riêng, còn bây giờ ta chỉ hiểu cơ bản chúng rằng . . . (? là gì) và cách để viết chúng vào trong soạn thảo LaTeX).   
+
+## Bài học: 
+
+(Sẽ thay bằng một ví dụ mới sau)
+
+### Ý thứ nhất: Cách sử dụng cơ bản
+
+Để viết được tiên đề, định nghĩa, định lý ..vv.. trong soạn thảo LaTeX, trước tiên người dùng sẽ cần phải khai báo chúng vào lệnh 
 
 ```latex
 \newtheorem{name}{text}
 ```
 
 trong đó: 
+
 + `name`: là . . . 
 + `text`: là . . .
 
-(? lệnh này được đặt ở đâu và giới thiệu đôi nét lệnh mới này, cũng như lệnh đó có vai trò, ý nghĩa gì trong xuyên suốt LaTeX)  
+(? lệnh này được đặt ở đâu trong cấu trúc soạn thảo latex, giới thiệu thêm đôi nét về lệnh mới này, cũng như lệnh đó có vai trò, ý nghĩa gì trong xuyên suốt trong phần bài học latex này)  
 
-Khi biên dịch sang trang tài liệu, nếu như các từ định nghĩa, định lý, ..vv.. được viết bằng ngôn ngữ tiếng Anh, thì các từ đó cũng sẽ xuất hiện trong trang tài liệu cũng sẽ là tiếng Anh. 
+Khi biên dịch sang trang tài liệu, nếu như các từ tiên đề, định nghĩa, định lý ..vv.. được viết bằng ngôn ngữ tiếng Anh, thì các từ đó cũng sẽ xuất hiện trong trang tài liệu cũng sẽ là tiếng Anh. 
 
-Ví dụ với môi trường định lý (? nó cũng không có môi trường) về định lý Gauss - Wantzel và môi trường định nghĩa  (? nó cũng không có môi trường) về định nghĩa số nguyên tố Fermat trong lĩnh vực . . . của toán học, trong đó từ định lý và định nghĩa được viết bằng tiếng Anh:  
+Ví dụ về lệnh `newtheorem` nhằm tạo môi trường **theorem** với định lý Gauss - Wantzel về số cạnh của đa giác đều có thể được dựng bởi thước và compa. Trong đó, từ định lý được viết bằng tiếng Anh:  
 
-```latex
-	\documentclass{article}
-	
-	% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
-	% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt tốt hơn trong LaTeX
-	\usepackage[utf8]{vietnam}
-	
-	% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Việt
-	\newtheorem{theorem}{Theorem}
-	\newtheorem{definition}{Definition}
-	
-	\begin{document}
-	
-	% ==========================================
-	% SECTION: ĐỊNH LÝ GAUSS - WANTZEL
-	% ==========================================
-	\begin{theorem}[Gauss--Wantzel]
-	% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
-	Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
-	% Công thức toán dạng khối (display style)
-	\[
-	n = 2^k \cdot p_1 \cdot p_2 \dots p_t
-	\]
-	% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
-	trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
-	\end{theorem}
-	
-	% ==========================================
-	% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
-	% ==========================================
-	\begin{definition}[Số nguyên tố Fermat]
-	% Khai báo dạng tổng quát của số Fermat
-	Một số nguyên có dạng 
-	\[
-	F_n = 2^{2^n}+1 
-	\]
-	% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
-	được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
-	\end{definition}
-	
-	\end{document}
-```
-
-Điều này cũng được áp dụng tương tự với tất cả với [ngôn ngữ khác](). Chẳng hạn, để viết các từ "định lý", "định nghĩa" ..vv.. đang là tiếng Anh sang tiếng Việt. Trước tiên, người dùng cần phải khai báo package [ngôn ngữ tiếng Việt ](). Sau đó người dùng chỉ cần gõ lại từ "theorem" (tiếng Anh) sang từ "định lý" (tiếng Việt) ở `text`.
-
-```latex
-% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
-% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt tốt hơn trong LaTeX
-\usepackage[utf8]{vietnam}
-
-% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Việt
-\newtheorem{theorem}{Định lý}
-\newtheorem{definition}{Định nghĩa}
-```
-
-Quay trở lại ví dụ trên, lúc này từ định lý và định nghĩa đều được viết sang tiếng Việt đầy đủ như sau:
-
-```latex
+```tex
 \documentclass{article}
-
+	
 % --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
-% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt tốt hơn trong LaTeX
+% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt trong LaTeX
 \usepackage[utf8]{vietnam}
-
-% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Việt
-\newtheorem{theorem}{Định lý}
-\newtheorem{definition}{Định nghĩa}
-
+	
+% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Anh
+\newtheorem{theorem}{Theorem}
+	
 \begin{document}
-
+	
 % ==========================================
 % SECTION: ĐỊNH LÝ GAUSS - WANTZEL
 % ==========================================
-\begin{theorem}[Gauss--Wantzel]
+\begin{theorem}
 % Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
 Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
 % Công thức toán dạng khối (display style)
 \[
-n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+	n = 2^k \cdot p_1 \cdot p_2 \dots p_t
 \]
 % Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
 trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
 \end{theorem}
-
-% ==========================================
-% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
-% ==========================================
-\begin{definition}[Số nguyên tố Fermat]
-% Khai báo dạng tổng quát của số Fermat
-Một số nguyên có dạng 
-\[
-F_n = 2^{2^n}+1 
-\]
-% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
-được gọi là số nguyên tố Fermat nếu kết quả $F_n$ tính được là một số nguyên tố.
-\end{definition}
-
+	
 \end{document}
 ```
 
+Điều này cũng được áp dụng tương tự với tất cả với [ngôn ngữ khác](). Chẳng hạn, để viết các từ "định lý", "định nghĩa" ..vv.. đang là tiếng Anh sang tiếng Việt. Trước tiên, người dùng cần phải khai báo package [ngôn ngữ tiếng Việt ]().
+
+```tex
+% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt tốt hơn trong LaTeX
+\usepackage[utf8]{vietnam}
+```
+
+Sau đó người dùng chỉ cần gõ lại từ "theorem" (tiếng Anh) sang từ "định lý" (tiếng Việt) ở `text`.
+
+```tex
+% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Việt
+\newtheorem{theorem}{Định lý}
+```
+
+Quay trở lại ví dụ trên, lúc này từ "theorem" bên tiếng Anh sẽ được hiển thị trên trang tài liệu là từ "định lý" bên tiếng Việt:
+
+```tex
+\documentclass{article}
+	
+% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
+% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt trong LaTeX
+\usepackage[utf8]{vietnam}
+	
+% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Anh
+\newtheorem{theorem}{Định lý}
+	
+\begin{document}
+	
+% Định lý Gauss - Wantzel
+\begin{theorem}
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức toán dạng khối (display style)
+\[
+	n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+	
+\end{document}
+```
+
+>[!NOTE]
+> Người dùng nên đồng bộ việc trình bày tài liệu bằng ngôn ngữ nào thì khởi tạo môi trường theo đúng ngôn ngữ trình bày đó. 
+
 Thậm chí, người dùng cũng có thể viết lại từ "theorem" ở `name` thành từ "định lý" mà không cần phải khai báo package ngôn ngữ tiếng Việt. 
 
-```latex
+```tex
 \documentclass{article}
 
 % --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
@@ -127,14 +111,13 @@ Thậm chí, người dùng cũng có thể viết lại từ "theorem" ở `nam
 
 % Khai báo môi trường "Theorem" (Định lý) và "Definition" (Định nghĩa) trong tiếng Anh
 \newtheorem{định lý}{Theorem}
-\newtheorem{định nghĩa}{Definition}
 
 \begin{document}
 
 % ==========================================
 % SECTION: ĐỊNH LÝ GAUSS - WANTZEL
 % ==========================================
-\begin{định lý}[Gauss--Wantzel]
+\begin{định lý}
 % Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
 The division of a circle into $n$ equal parts using a straightedge and compass is possible if and only if
 % Công thức hiển thị ở dạng khối (display math mode)
@@ -145,39 +128,219 @@ n = 2^k \cdot p_1 \cdot p_2 \dots p_t
 where $k$ is a non-negative integer and $p_1, p_2, \dots, p_t$ are distinct Fermat primes.
 \end{định lý}
 
+\end{document} 
+```
+
+Đây chỉ là ví dụ vui và tất nhiên thì như đã nêu ở phân lưu ý trên, ta nên đồng bộ ngôn ngữ bên trong khởi tạo môi trường với ngôn ngữ trình bày. 
+
+Anh - Anh: 
+
+```tex
+\documentclass{article}
+
+% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
+% Sử dụng bảng mã utf8 để gõ tiếng Anh hoặc ký tự đặc biệt bình thường
+\usepackage[utf8]{inputenc}
+
+% Khai báo môi trường "Theorem" (Định lý) và "Definition" (Định nghĩa) trong tiếng Anh
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
 % ==========================================
-% SECTION: ĐỊNH NGHĨA SỐ NGUYÊN TỐ FERMAT
+% SECTION: ĐỊNH LÝ GAUSS - WANTZEL
 % ==========================================
-\begin{định nghĩa}[Fermat prime]
-% Khai báo dạng tổng quát của số Fermat
-An integer of the form 
+\begin{theorem}
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+The division of a circle into $n$ equal parts using a straightedge and compass is possible if and only if
+% Công thức hiển thị ở dạng khối (display math mode)
 \[
-F_n = 2^{2^n}+1 
+    n = 2^k \cdot p_1 \cdot p_2 \dots p_t
 \]
-% Điều kiện để một số Fermat trở thành số nguyên tố Fermat
-is called a Fermat prime if the output value calculated from $F_n$ is a prime number.
-\end{định nghĩa}
+% Giải thích các biến trong công thức
+where $k$ is a non-negative integer and $p_1, p_2, \dots, p_t$ are distinct Fermat primes.
+\end{theorem}
 
 \end{document} 
 ```
 
-Người dùng cũng có thể viết ở `text` là tên chính định lý, định nghĩa, ..vv.. đó thay vì chỉ hiện từ "định nghĩa", "định lý", ..vv.. thông thường, mới kèm theo tên gọi định lý, định nghĩa đó (? viết lại đọa "thông thường, mới kèm . . .") như ví dụ trên.  
+Việt - Việt: 
 
-Cụ thể, ta có thể viết lại "**Định lý 1 (Gauss - Wantzel)**"  thành "**Định lý Gauss - Wantzel**".  
-
-```latex
-\newtheorem{theorem}{Định lý Gauss - Wantzel}
+```tex
+\documentclass{article}
+	
+% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
+% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt trong LaTeX
+\usepackage[utf8]{vietnam}
+	
+% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Anh
+\newtheorem{định lý}{Định lý}
+	
+\begin{document}
+	
+% Định lý Gauss - Wantzel
+\begin{định lý}
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức toán dạng khối (display style)
+\[
+	n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{định lý}
+	
+\end{document}
 ```
 
-Tương tự đối với định nghĩa về số nguyên tố Fermat. 
+. . . (? chưa biết dẫn dắt sao cho đúng, vì đang bí từ, nhưng cụ thể thì tiếng Anh vẫn là ngôn ngữ chung, nên ta vẫn khởi tạo môi trường với `text` là tiếng Anh cho quen thuộc với các bài học trước đó và về sau, còn nội dung thì vẫn là tiếng Việt.)
 
-```latex
-\newtheorem{theorem}{Số nguyên tố Fermat}
+Anh - Việt: 
+
+```tex
+\documentclass{article}
+	
+% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
+% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt trong LaTeX
+\usepackage[utf8]{vietnam}
+	
+% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Anh
+\newtheorem{theorem}{Định lý}
+	
+\begin{document}
+	
+% Định lý Gauss - Wantzel
+\begin{theorem}
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức toán dạng khối (display style)
+\[
+	n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+	
+\end{document}
+```
+
+---
+
+### Ý thứ hai: Viết kèm theo tên gọi định lý đó  
+
+Bên cạnh môi trường viết tiên đề, định nghĩa, định lý , ..vv.. mà ta khai báo bằng lệnh `\newtheorem`, ta có thể thêm tên tác giả gốc, hoặc chú thích thêm của định lý đó. 
+
+Ở **định lý 1** mà ta trình bày trên là định lý Gauss về đa giác đều , được do chính nhà toán học Gauss đưa ra, tuy ông ... (? kèm theo lịch sử của định lý đó) bằng cách thêm nội dung vào bên trong dấu ngoặc vuông `[]` vào bên trong môi trường định lý mà ta vừa khai báo. 
+
+```tex
+\begin{theorem}
+[Gauss] % 
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức toán dạng khối (display style)
+\[
+	n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+```
+
+```tex
+\documentclass{article}
+	
+% --- CẤU HÌNH GÓI & MÔI TRƯỜNG ---
+% Sử dụng gói vietnam để hỗ trợ gõ tiếng Việt trong LaTeX
+\usepackage[utf8]{vietnam}
+	
+% Khai báo môi trường Định lý và Định nghĩa bằng tiếng Anh
+\newtheorem{theorem}{Định lý}
+	
+\begin{document}
+	
+% Định lý Gauss cho đa giác đều
+\begin{theorem}
+[Gauss]
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức toán dạng khối (display style)
+\[
+	n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+	
+\end{document}
+```
+
+Nếu người dùng viết . . . (? chưa biết mô tả sao)
+
+```tex
+\begin{theorem}
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức toán dạng khối (display style)
+\[
+	n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+[Gauss] % 
+```
+
+hoặc
+
+```tex
+\begin{theorem}
+
+[Gauss]  
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức toán dạng khối (display style)
+\[
+	n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+```
+
+thì hệ thống sẽ hiểu `[Gauss]` cũng là nội dung bên trong phần định nghĩa đó, nên sẽ không thêm chú thích bên cạnh tiêu đề định lý.
+
+Ta chỉ cần để từ đó như cách đã hướng dẫn (? mô tả chán quá) và không nên khoảng cách . . . bằng cách xóa đi dòng trắng đó, hoặc thêm chú thích. 
+
+Tuy vậy, khuyến khích nên để . . . bên cạnh lệnh `\begin{}` 
+
+```tex
+\begin{theorem}[Gauss]  
+% Nội dung định lý về điều kiện dựng hình đa giác đều bằng thước và compa
+Việc chia đường tròn thành $n$ phần bằng nhau bằng thước kẻ và compa là khả thi khi và chỉ khi
+% Công thức toán dạng khối (display style)
+\[
+	n = 2^k \cdot p_1 \cdot p_2 \dots p_t
+\]
+% Giải thích các tham số trong công thức (k có thể bằng 0 nên dùng số nguyên không âm)
+trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là các số nguyên tố Fermat phân biệt.
+\end{theorem}
+```
+
+---
+
+### Ý thứ ba: Tên gọi chính của định lý đó
+
+Người dùng cũng có thể viết ở `text` là tên gọi chính của định lý, định nghĩa, ..vv.. đó thay vì chỉ hiện từ "định nghĩa", "định lý", ..vv.. thông thường, mới kèm theo tên gọi định lý, định nghĩa đó (? viết lại đoạn "thông thường, mới kèm . . .") như ví dụ trên.
+
+Cụ thể, ta có thể viết lại "**Định lý 1 (Gauss)**" thành "**Định lý Gauss**".  
+
+```tex
+\newtheorem{theorem}{Định lý Gauss}
 ```
 
 Áp dụng điều này vào lại ví dụ . . . , lúc này ta được: 
 
-```latex
+```tex
 \documentclass{article}
 
 % Khai báo font tiếng Việt cho LaTeX
@@ -217,9 +380,13 @@ F_n = 2^{2^n}+1
 \end{document}
 ```
 
-Trong trường hợp người dùng muốn viết định lý mới, nếu như người dùng sử dụng lại môi trường **theorem** đã được định nghĩa ban đầu, thì ở phần tiêu đề định lý mới đó vẫn sẽ xuất hiện "Định lý Gauss - Wantzel" như ở hai định lý . . . (? Hai định lý gì nhỉ)  
+---
 
-```latex
+### Ý thứ tư: Tránh việc bị lặp lại với việc khai báo môi trường tên gọi chính của định lý đó
+
+Trong trường hợp người dùng muốn viết định lý mới, nếu như người dùng sử dụng lại môi trường **theorem** đã được định nghĩa ban đầu, thì ở phần tiêu đề định lý mới đó vẫn sẽ xuất hiện "Định lý Gauss - Wantzel" như ở định lý . . . (? Hai định lý gì nhỉ)  
+
+```tex
 \documentclass{article}
 
 % Khai báo font tiếng Việt cho LaTeX
@@ -427,6 +594,8 @@ Người dùng có thể áp dụng tương tự . . . (? Áp dụng tương t�
 \end{thm} 
 ```
 
+### Ý thứ năm: Xóa số bên cạnh định lý (khi viết đầy đủ tên gọi định lý chính đó)
+
 Người dùng có thể thấy rằng, bên cạnh các tên chính của định lý, định nghĩa đó sẽ xuất hiện số thứ tự không cần thiết nằm ở bên cạnh chúng. 
 
 . . . (Để không muốn có số thứ tự bên cạnh. . . ), trước tiên người dùng cần phải khai báo package sau: 
@@ -504,6 +673,8 @@ F_n = 2^{2^n}+1
 ```
 
 Người dùng có thể thấy rằng, bên cạnh tên "Định lý Gauss - Wantzel" và cũng như là "Số nguyên tố Fermat" không còn xuất hiện số thứ tự bên cạnh nữa. 
+
+### Ý thứ sáu: Cập nhật số thứ tự khi viết môi trường mới
 
 Nếu như người dùng viết một ví dụ ngay sau phần **định lý 2** ở đoạn mã trên: 
 
@@ -657,6 +828,8 @@ F_n = 2^{2^n}+1
 \end{document}
 ```
 
+### Ý thứ sáu chấm một: Cập nhật số thứ tự theo mục lục
+
 Với bài viết chia [mục lục]() . . . ta chỉ cần thêm các lệnh . . .  tương ứng với phần tiêu đề . . .đó vào . . (? viết tào lao gì vậy)
 
  Giả sử . . . : Nếu như tiêu đề mục đang được sử dụng là lệnh `\section`, thì ta chỉ cần thêm . . . vào . . . cũng là `section`.  (? viết lại nhé) 
@@ -739,6 +912,8 @@ F_n = 2^{2^n}+1
 
 \end{document}
 ```
+
+### Ý thứ bảy chọ: Phân biệt cách trình bày của tiên đề, định nghĩa, định lý, ..vv..
 
 (? Nêu vấn đề vì sao ta lại phải phân biệt định nghĩa, định lý) 
 
@@ -953,6 +1128,8 @@ Fermat nhận ra 5 số Fermat đầu tiên là \(F_0 = 3, F_1 = 5; F_2 = 17, F_
 \end{document}
 ```
 
+### Ý thứ tám: Bằng chứng (proof)
+
 Bằng chứng (tiếng anh là proof) là . . . (? giải thích nghĩa từ bằng chứng, cũng như phân biệt chứng minh toán học so với các chứng minh ở bên vật lý, hóa học, ...vv...)
 
 Để viết bằng chứng trong soạn thảo LaTeX, người dùng sử dụng môi trường `proof`
@@ -1005,6 +1182,8 @@ Kết quả này chứng tỏ \(F_5 \vdots 641\). Vậy \(F_5\) là hợp số.
 
 \end{document}
 ```
+
+### Ý thứ tám chấm một: Q.E.D
 
 Khi hoàn thành xong phần chứng minh cho định lý, mệnh đề, bổ đề, ..vv.. nào đó trong toán học, chúng ta luôn luôn kết lại bằng câu "điều phải chứng minh".
 
@@ -1199,6 +1378,8 @@ Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
 
 \end{document}
 ```
+
+### Ý thứ chín: Tham chiếu chéo tiên đề, định nghĩa, định lý, ..vv..
 
 Để tham chiếu chéo các định lý, định nghĩa, ..vv.. người dùng xem qua bài học [tham chiếu chéo](). 
 
