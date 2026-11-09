@@ -1393,6 +1393,127 @@ Hai nhà toán học người Pháp Fermat (trái), Wantzel (phải) và nhà to
 
 --- 
 
+### Ý thứ 10 (bổ sung và sẽ cập nhật vào trong bài học chính sau): Viết mệnh đề theo dạng liệt kê: 
+
+Trong một số trường hợp, người dùng không đề cập dụng nội dung đầu của tiên đề, định nghĩa, định lý, ..vv.. đó. Để dễ hình dung, ta cùng xem qua ví dụ sau:  
+
+(? . . .nêu rõ lại nguyên nhân, giải thích vì sao) 
+
+(? . . . đi tìm một ví dụ mới sau)
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
+% . . .
+\usepackage{amssymb}
+
+%  . . .
+\theoremstyle{plain}
+\newtheorem{proposition}{Mệnh đề}[section]
+
+\begin{document}
+
+\begin{proposition}
+	\begin{enumerate}
+	    \item Nếu \(a, b \in \mathbb{Z_+}\) là hai số nguyên dương nguyên tố cùng nhau thì ta có \(\phi(ab) = \phi(a)\phi(b)\)
+	    \item Nếu \(n = p^m\) là lũy thừa bậc \(m\) của một số nguyên tố \(p\) thì ta có
+	    \[
+	        \phi(p^m) = (p-1)p^{m-1}
+	    \]
+	    \item Nếu \(n = p_1^{m_1} \dots p_r^{m_r}\) là lũy thừa bậc \(m\) của một số nguyên tố \(p\) thì ta có
+	    \[
+	        \phi(p^m) = \prod_{i = 1}^r (p_i - 1)p_i^{m_1 - 1}
+	    \]
+	\end{enumerate}
+\end{proposition}
+
+\end{document}
+```
+
+
+Để khắc phục được điều có hai cách cơ bản sau: 
+
+**Cách 1**: Sử dụng lệnh `\hfill` được đặt bên trong môi trường `proposition` mà ta vừa định nghĩa và trước môi trường `enumerate` trên (? giải thích thêm lệnh `\hfill` này, tham khảo ở bài học đây https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces):
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
+% . . .
+\usepackage{amssymb}
+
+%  . . .
+\theoremstyle{plain}
+\newtheorem{proposition}{Mệnh đề}[section]
+
+\begin{document}
+
+\begin{proposition} \hfill
+	\begin{enumerate}
+	    \item Nếu \(a, b \in \mathbb{Z_+}\) là hai số nguyên dương nguyên tố cùng nhau thì ta có \(\phi(ab) = \phi(a)\phi(b)\)
+	    \item Nếu \(n = p^m\) là lũy thừa bậc \(m\) của một số nguyên tố \(p\) thì ta có
+	    \[
+	        \phi(p^m) = (p-1)p^{m-1}
+	    \]
+	    \item Nếu \(n = p_1^{m_1} \dots p_r^{m_r}\) là lũy thừa bậc \(m\) của một số nguyên tố \(p\) thì ta có
+	    \[
+	        \phi(p^m) = \prod_{i = 1}^r (p_i - 1)p_i^{m_1 - 1}
+	    \]
+	\end{enumerate}
+\end{proposition}
+
+\end{document}
+```
+
+
+**Cách 2**: Thay lệnh `\hfill` ở **cách 1** bằng lệnh mới `\leavemode` . . . (? giải thích thêm lệnh này) 
+
+```latex
+\documentclass{article}
+
+% Khai báo font tiếng Việt cho LaTeX
+\usepackage[utf8]{vietnam}
+% . . .
+\usepackage{amsmath}
+% . . . 
+\usepackage{amsthm} 
+% . . .
+\usepackage{amssymb}
+
+%  . . .
+\theoremstyle{plain}
+\newtheorem{proposition}{Mệnh đề}[section]
+
+\begin{document}
+
+\begin{proposition} \leavevmode % Đẩy item 1 xuống 
+	\begin{enumerate}
+	    \item Nếu \(a, b \in \mathbb{Z_+}\) là hai số nguyên dương nguyên tố cùng nhau thì ta có \(\phi(ab) = \phi(a)\phi(b)\)
+	    \item Nếu \(n = p^m\) là lũy thừa bậc \(m\) của một số nguyên tố \(p\) thì ta có
+	    \[
+	        \phi(p^m) = (p-1)p^{m-1}
+	    \]
+	    \item Nếu \(n = p_1^{m_1} \dots p_r^{m_r}\) là lũy thừa bậc \(m\) của một số nguyên tố \(p\) thì ta có
+	    \[
+	        \phi(p^m) = \prod_{i = 1}^r (p_i - 1)p_i^{m_1 - 1}
+	    \]
+	\end{enumerate}
+\end{proposition}
+
+\end{document}
+```
+
 ## Tài liệu tham khảo: 
 
 \[1]:  Tham khảo viết từ: https://paulwintz.com/mathematical-writing/theorem-like-environments-in-latex/ và bài viết về "[Số nguyên tố Fermat](LaTeX-Library-project-v1.0.0/Toán học/Bib math/pdf/Số nguyên tố Fermat.pdf)" 
