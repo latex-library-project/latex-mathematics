@@ -246,6 +246,8 @@ trong đó $k$ là một số nguyên dương và $p_1, p_2, \dots, p_t$ là cá
 \end{theorem}
 ```
 
+Tổng hợp đầy đủ lại ta có đoạn mã sau:
+
 ```tex
 \documentclass{article}
 	
@@ -594,6 +596,8 @@ Người dùng có thể áp dụng tương tự . . . (? Áp dụng tương t�
 \end{thm} 
 ```
 
+---
+
 ### Ý thứ năm: Xóa số bên cạnh định lý (khi viết đầy đủ tên gọi định lý chính đó)
 
 Người dùng có thể thấy rằng, bên cạnh các tên chính của định lý, định nghĩa đó sẽ xuất hiện số thứ tự không cần thiết nằm ở bên cạnh chúng. 
@@ -673,6 +677,8 @@ F_n = 2^{2^n}+1
 ```
 
 Người dùng có thể thấy rằng, bên cạnh tên "Định lý Gauss - Wantzel" và cũng như là "Số nguyên tố Fermat" không còn xuất hiện số thứ tự bên cạnh nữa. 
+
+---
 
 ### Ý thứ sáu: Cập nhật số thứ tự khi viết môi trường mới
 
@@ -828,6 +834,8 @@ F_n = 2^{2^n}+1
 \end{document}
 ```
 
+---
+
 ### Ý thứ sáu chấm một: Cập nhật số thứ tự theo mục lục
 
 Với bài viết chia [mục lục]() . . . ta chỉ cần thêm các lệnh . . .  tương ứng với phần tiêu đề . . .đó vào . . (? viết tào lao gì vậy)
@@ -912,6 +920,8 @@ F_n = 2^{2^n}+1
 
 \end{document}
 ```
+
+---
 
 ### Ý thứ bảy chọ: Phân biệt cách trình bày của tiên đề, định nghĩa, định lý, ..vv..
 
@@ -1183,6 +1193,8 @@ Kết quả này chứng tỏ \(F_5 \vdots 641\). Vậy \(F_5\) là hợp số.
 \end{document}
 ```
 
+---
+
 ### Ý thứ tám chấm một: Q.E.D
 
 Khi hoàn thành xong phần chứng minh cho định lý, mệnh đề, bổ đề, ..vv.. nào đó trong toán học, chúng ta luôn luôn kết lại bằng câu "điều phải chứng minh".
@@ -1378,6 +1390,8 @@ Ta thấy rằng . . .(tìm hiểu một chút lý thuyết số nữa nhé)
 
 \end{document}
 ```
+
+---
 
 ### Ý thứ chín: Tham chiếu chéo tiên đề, định nghĩa, định lý, ..vv..
 
