@@ -1528,6 +1528,17 @@ Trong một số trường hợp, người dùng không đề cập dụng nội
 \end{document}
 ```
 
+## Ý thứ ? : Gợi ý viết ví dụ tiên đề, định nghĩa, định lý mà chưa sử dụng đến bài học viết toán học hay liệt kê. 
+
+Bổ đề 1. Với mọi các số nguyên các không có thể được viết lại dưới dạng tích của các số nguyên tố 
+
+(Lemma 1. Every nonzero integer can be written as a product of primes.)
+
+(được tham khảo từ: https://ebooks.karbust.me/Mathematics/Kenneth%20Ireland,%20Michael%20Rosen%20-%20A%20Classical%20Introduction%20to%20Modern%20Number%20Theory%20(1990)%20[978-1-4757-2103-4].pdf, trang 3) 
+
+
+---
+
 ## Tài liệu tham khảo: 
 
 \[1]:  Tham khảo viết từ: https://paulwintz.com/mathematical-writing/theorem-like-environments-in-latex/ và bài viết về "[Số nguyên tố Fermat](LaTeX-Library-project-v1.0.0/Toán học/Bib math/pdf/Số nguyên tố Fermat.pdf)" 
