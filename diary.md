@@ -93,3 +93,5 @@ Chỉ là, tôi nên tổng hợp quá trình đó ở trước, giữa hay sau 
 ## Vấn đề 1.09.11.26: 
 
 Ở mỗi bài học tôi trình bày dài lê thê, tôi nên tóm tắt, cô đọng, xúc tích lại kiến thức của phần bài học đó. 
+
+Điều này rất quan trọng phải không ? 
