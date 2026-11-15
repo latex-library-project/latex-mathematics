@@ -252,7 +252,15 @@ Ví dụ: . . .
 
 ---
 
+## Quy ước kiểu chữ cho toán học : 
+
+https://www.shearsoneditorial.com/2012/07/typographical-conventions-for-mathematics/
+
+---
+
 ## Một số phông chữ trong toán học 
+
+Tham khảo từ: https://www.overleaf.com/learn/latex/Mathematical_fonts
 
 Phông chữ toán học thông thường: 
 
@@ -311,6 +319,7 @@ $$\mathtt{ABC} \ \mathtt{abc} \ \mathtt{123}$$
 $$
 \mathcal{ABCDEF}
 $$
+
 Để viết các tập số như tập tự nhiên $\mathbb{N}$, ..vv.. rước tiên ta cần phải khai báo package là `amssymb` hoặc `amsfonts`. Sau đó sử dụng lệnh `\mathbb`:  
 
 ```latex
@@ -338,6 +347,7 @@ $$\mathfrak{ABC} \ \mathfrak{abc} \ \mathfrak{123}$$
 $$
 \mathscr{ABCDEF} 
 $$
+
 --- 
 
 ## Viết phương trình theo mục lục (đặt tiêu đề lại)
