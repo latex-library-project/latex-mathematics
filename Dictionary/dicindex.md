@@ -1,13 +1,10 @@
-**Câu hỏi 1**: Thế nào là phương trình toán học ?   
+## Lời nói đầu: 
 
-Đây là câu hỏi hay và cũng đáng để ta ôn lại. 
+Nơi đây sẽ tập trung sưu tập, phân loại và trình bày về những thuật ngữ, từ vựng chuyên ngành toán.
 
-**Câu hỏi 2**: AMS là gì ? 
+---
 
-_ AMS: American Mathematical Society (Hiệp hội toán học Hoa Kỳ) là một hiệp hội [các nhà toán học](https://en.wikipedia.org/wiki/Mathematician "Nhà toán học")(mathematician) chuyên nghiệp tận tâm với lợi ích của nghiên cứu và học thuật [toán học](https://en.wikipedia.org/wiki/Mathematics "Toán học") (mathematical), và phục vụ cộng đồng trong nước và quốc tế thông qua các ấn phẩm, hội nghị, hoạt động vận động và các chương trình khác.[^1]
-
-
-**Vấn đề 3**: Các thuật ngữ Anh - Việt  bài học **"Định nghĩa, định lý, ..vv.."**
+### Vấn đề 1: Các thuật ngữ Anh - Việt trong bài học **"Định nghĩa, định lý, ..vv.."**. 
 
 + Vấn đề (problems): 
 + Tiên đề (axiom): 
@@ -29,20 +26,23 @@ _ AMS: American Mathematical Society (Hiệp hội toán học Hoa Kỳ) là m�
 + Điều kiện (conditions): 
 + Chứng minh (proof): 
 
-**Vấn đề 4**: Gợi ý từ viết tắt cho bài học **"Định nghĩa, định lý, ..vv.."**
+---
+
+### Vấn đề 2: Gợi ý từ viết tắt cho bài học **"Định nghĩa, định lý, ..vv.."**
 
 <div align="center">
 	<img src="./Diary/Theorem environments.jpg" alt="Theorem environments"> 
 </div>
 
-**Vấn đề 4**: Toán tử trong toán học là gì ? 
-
-. . . 
-
-Các toán tử trong toán học:
-+ Toán tử số học (Arithmetic Operators): +, - 
-+ Toán tử quan hệ (Relational Operators): >, < 
 
 --- 
 
-[^1]: Nguồn tham khảo từ Wiki: https://en.wikipedia.org/wiki/American_Mathematical_Society 
+### Vấn đề 3: inline math , display math 
+
+Inline math (tạm dịch toán học nội tuyến) là chế độ viết toán học vào trong cùng đoạn văn bản. 
+
+Display math (tạm dịch toán học . . .) là chế độ viết toán học ở một dòng riêng biệt so với đoạn văn bản.
+
+--- 
+
+## Nguồn tham khảo
