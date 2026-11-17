@@ -1,5 +1,6 @@
+## Bài học: 
 
-Để viết chỉ số trên người dùng sử dụng kí hiệu `^`, còn với chỉ số dưới người dùng sử dụng kí hiệu `_` . 
+Để viết chỉ số trên (superscripts) người dùng sử dụng kí hiệu `^`, còn với chỉ số dưới (subscripts) người dùng sử dụng kí hiệu `_` . 
 
 Các kí hiệu chỉ số trên và chỉ số dưới được đặt ở sau kí hiệu, chữ cái toán học. (? viết chưa hợp lí lắm, cần viết lại)
 
@@ -109,11 +110,42 @@ Người dùng có thể thấy, để viết được bao quát chỉ số dư�
 
 <div align="center">
 
-<img src="./images/Albert Einstein.jpg" alt="Einstein">
+<img src="./images/Albert Einstein.jpg" alt="Einstein" height="50%" width="50%">
 
 Nhà vật lý người Đức Albert Einstein
 
 </div> 
+
+
+---
+
+### Ý thứ . . . : Lũy thừa tầng
+
+Lũy thừa tầng (tetration) là . . . (abcdzyz)
+
+Kí hiệu quen thuộc, ví dụ $x^{m^{n}}$: 
+
+```tex
+\[
+x^{m^{n}}
+\]
+```
+
+Tổng quát lên ta có: 
+
+```tex
+\[
+{}^{n} a = a^{a{^{\cdot^{\cdot^{\cdot^{a}}}}}}
+\]
+```
+
+$$
+{}^{n} a = a^{a{^{\cdot^{\cdot^{\cdot^{a}}}}}}
+$$
+
+Kí hiệu lũy thừa tầng của Knuth (còn được gọi là Knuth's up-arrow notation) có dạng: 
+
+
 
 ---
 
