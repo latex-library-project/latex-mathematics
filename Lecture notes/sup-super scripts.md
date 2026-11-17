@@ -1,5 +1,7 @@
 ## Bài học: 
 
+### Ý thứ nhất: Chỉ số trên và chỉ số dưới
+
 Để viết chỉ số trên (superscripts) người dùng sử dụng kí hiệu `^`, còn với chỉ số dưới (subscripts) người dùng sử dụng kí hiệu `_` . 
 
 Các kí hiệu chỉ số trên và chỉ số dưới được đặt ở sau kí hiệu, chữ cái toán học. (? viết chưa hợp lí lắm, cần viết lại)
@@ -24,7 +26,7 @@ $$
 
 <div align="center">
 
-<img src="./images/Andrew Wiles.jpg" alt="Andrew Wiles">
+<img src="./images/Andrew Wiles.jpg" alt="Andrew Wiles" width="70%">
 
 Nhà toán học người Anh Andrew Wiles
 
@@ -48,46 +50,31 @@ $$
 
 <div align="center">
 
-<img src="./images/Boltzmann.jpg" alt="Ludwig Boltzmann">
+<img src="./images/Boltzmann.jpg" alt="Ludwig Boltzmann" width="50%">
 
 Nhà vật lý người Áo Ludwig Boltzmann
 
 </div>
 
-Các kí hiệu chỉ số trên và chỉ số dưới cũng có thể được kết hợp trong cùng một biểu thức $C^k_n$ (đọc là tổ hợp chập $k$ của $n$ phần tử) như ở ví dụ về công thức nhị thức Newton giúp khai triển lũy thừa bậc nguyên dương của một tổng thành tổng các đơn thức 
+--- 
 
-```latex
-\documentclass{article}
-\begin{document}
-\[
-(a + b)^n = C^k_n a^{n-k} b^k % . . .C^k_n
-\]
-\end{document}
-```
+### Ý thứ hai: Gom biểu thức ở chỉ số trên và chỉ số dưới (? đặt tên bài học chán vãi)
 
-Kết quả nhận được sẽ là 
+Công thức Euler trong số phức: 
 
 $$
-(a + b)^n = C^k_n a^{n-k} b^k
+e^{i \pi} + 1 = 0
 $$
 
-<div align="center">
-
-<img src="./images/Isaac Newton.jpg" alt="I.Newton">
-
-Nhà vật lý người Anh Isaac Newton
-
-</div>
-
-Cũng ở ví dụ về công thức nhị thức Newton trên, người dùng có thể thấy để viết được biểu thức $n-k$ ở chỉ số trên của $a$, chúng cần được gom lại trong dấu ngoặc nhọn `{}` được đặt sau kí hiệu chỉ số trên. 
+Người dùng có thể thấy để viết được biểu thức $i \pi$ ở chỉ số trên của cơ số $e$, chúng cần được gom lại trong dấu ngoặc nhọn `{}` được đặt sau kí hiệu chỉ số trên. 
 
 Nếu như người viết thông thường 
 
 ```latex
-a^n-k
+e^i \pi
 ```
 
-thì hệ thống sẽ chỉ hiểu người dùng đang viết $a^n-k$ thay vì $a^{n-k}$.   
+thì hệ thống sẽ chỉ hiểu người dùng đang viết $e^i \pi$ thay vì $e^{i \pi}$.   
 
 Điều này cũng được áp dụng tương tự đối với chỉ số dưới. 
 
@@ -116,10 +103,55 @@ Nhà vật lý người Đức Albert Einstein
 
 </div> 
 
+---
+
+### Ý thứ ba: Kết hợp chỉ số trên và dưới
+
+Các kí hiệu chỉ số trên và chỉ số dưới cũng có thể được kết hợp trong cùng một biểu thức $C^k_n$ (đọc là tổ hợp chập $k$ của $n$ phần tử) như ở ví dụ về công thức nhị thức Newton giúp khai triển lũy thừa bậc nguyên dương của một tổng thành tổng các đơn thức 
+
+```tex
+\documentclass{article}
+\begin{document}
+\[
+(a + b)^n = C_n^k a^{n-k} b^k % . . .C^k_n
+\]
+\end{document}
+```
+
+Kết quả nhận được sẽ là:  
+
+$$
+(a + b)^n = C_n^k a^{n-k} b^k
+$$
+
+Điều này cũng đúng nếu như ta viết `C_n^k` thành `C^k_n`: 
+
+```tex
+\documentclass{article}
+\begin{document}
+\[
+(a + b)^n = C^k_n a^{n-k} b^k % . . .C^k_n
+\]
+\end{document}
+```
+
+Kết quả nhận được cũng sẽ là: 
+
+$$
+(a + b)^n = C^k_n a^{n-k} b^k
+$$
+
+<div align="center">
+
+<img src="./images/Isaac Newton.jpg" alt="I.Newton" width="50%" height="50%">
+
+Nhà vật lý người Anh Isaac Newton
+
+</div>
 
 ---
 
-### Ý thứ . . . : Lũy thừa tầng
+### Ý thứ tư : Lũy thừa tầng 
 
 Lũy thừa tầng (tetration) là . . . (abcdzyz)
 
@@ -145,7 +177,17 @@ $$
 
 Kí hiệu lũy thừa tầng của Knuth (còn được gọi là Knuth's up-arrow notation) có dạng: 
 
+$$
+a \uparrow^n b = a \underbrace{\mathbin{\uparrow \uparrow \cdots \uparrow}}_{\text{n mũi tên}} b = H_{n+2}(a,b) = a[n+2]b
+$$
 
+Viết dưới dạng LaTeX: 
+
+```tex
+\[
+a \uparrow^n b = a \underbrace{\mathbin{\uparrow \uparrow \cdots \uparrow}}_{\text{n mũi tên}} b = H_{n+2}(a,b) = a[n+2]b
+\]
+```
 
 ---
 
