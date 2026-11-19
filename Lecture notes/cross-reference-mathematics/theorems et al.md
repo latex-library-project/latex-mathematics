@@ -1,3 +1,5 @@
+## Bài học:
+
 Để tham chiếu đến định lý, định nghĩa, trước tiên ta cần đặt lệnh 
 
 ```latex
@@ -60,16 +62,24 @@ Như vậy, định lý \ref{thm:0.2} chính là trường hợp tổng quát c�
 \end{document}
 ```
 
-(?) Có hai vấn đề mà mình chưa giải quyết trong phần này
-
-(1) Khi định lý bị thay đổi số thì hệ thống sẽ không được tự cập nhật dẫn đến đôi khi tham chiếu không được hợp lí. Ví dụ khi "định lý 1.1" bị thay đổi thành "định lý 1.2" thì nếu ta để `\label{1.1}` thì `\ref{1.1}` vẫn sẽ để 1.1. 
-
-(2) Với định lý có tên dài, chẳng hạn "định lý Gauss - Wantzel" thì làm sao để `\ref` có đầy đủ tên định lý đó để tham chiếu đến tiêu đề định lý Gauss - Wantzel. 
-
-(Ảnh Lagrange và Rolle) 
-
 <div align="center">
 
-<img src="LaTeX-Library-project-v1.0.0/images/Theorem environments.jpg"> 
+<img src="./lagrange-rolle.jpg" width="80%" alt="lagrange-rolle"> 
+
+Hai nhà toán học người Pháp Joseph-Louis Lagrange (bên trái) và Michel Rolle (bên phải)
 
 </div> 
+
+--- 
+
+## Câu hỏi
+
+Có hai vấn đề mà mình chưa giải quyết trong phần này: 
+
+**Vấn đề 1** (vấn đề đặt tên): Giả sử ta đang có hai định lý 1.1 và định lý 1.2. Nếu ta thêm một định lý sau định lý 1.1 và trước định lý 1.2 (lúc này sẽ là định lý 1.3 chẳng hạn). Vậy nếu ta để `\label` lúc này ở định lý 1.2 cũ với nội dung là **thm:1.2** , thì ta sẽ phải đổi lại là **thm:1.3**. Điều này sẽ rất phiền phức đối với một tài liệu dài và phải thay đổi liên tục nếu như lỡ sử dụng lệnh `\ref` với nội dung cũ đã bị thay. Vậy có cách nào để tránh tình trạng làm và sửa thủ công này ko ? (nên viết rõ lại câu hỏi cho rõ vấn đề cần hỏi)
+
+Vấn đề này nên được giới thiệu sơ lược ở phần bài học về cách viết [tiên đề, định lý, ..vv..](/Lecture%20notes/theorem,%20definition,%20..vv...md). Cụ thể là phần cách đặt tên cho tên nhãn. Gợi ý câu hỏi vì sao ko nên đặt tên có số như `thm:1.2` chẳng hạn, để phải qua bài học này thì mới biết nhé. 
+
+**Vấn đề 2** (vấn đề tham chiếu với định lý được viết theo tên tác giả): Với định lý có tên dài, chẳng hạn "định lý Gauss - Wantzel" thì làm sao để viết nội dung `\ref` sao cho có đầy đủ tên định lý đó để tham chiếu đến tiêu đề định lý ví dụ như định lý Gauss - Wantzel. 
+
+Cách viết ở trường hợp **vấn đề 2** này, chỉ nên được sử dụng khi viết các bài báo dạng ngắn (thuộc lớp article) về vấn đề lịch sử toán học ?

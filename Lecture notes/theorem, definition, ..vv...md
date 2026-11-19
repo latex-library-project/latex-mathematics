@@ -1528,7 +1528,9 @@ Trong một số trường hợp, người dùng không đề cập dụng nội
 \end{document}
 ```
 
-## Ý thứ ? : Gợi ý viết ví dụ tiên đề, định nghĩa, định lý mà chưa sử dụng đến bài học viết toán học hay liệt kê. 
+---
+
+### Ý thứ ? : Gợi ý viết ví dụ tiên đề, định nghĩa, định lý mà chưa sử dụng đến bài học viết toán học hay liệt kê. 
 
 Bổ đề 1. Với mọi các số nguyên các không có thể được viết lại dưới dạng tích của các số nguyên tố 
 
@@ -1536,6 +1538,21 @@ Bổ đề 1. Với mọi các số nguyên các không có thể được viế
 
 (được tham khảo từ: https://ebooks.karbust.me/Mathematics/Kenneth%20Ireland,%20Michael%20Rosen%20-%20A%20Classical%20Introduction%20to%20Modern%20Number%20Theory%20(1990)%20[978-1-4757-2103-4].pdf, trang 3) 
 
+(update 20/11/2026): ta đã tìm được một bổ đề thú vị mà chưa cần phải sử dụng việc viết toán học vào trong môi trường đó trước tiên đề làm ví dụ, đó là bổ đề Zorn: https://kconrad.math.uconn.edu/blurbs/zorn1.pdf
+
+--- 
+
+## Lưu ý: 
+
+Khi viết tên gọi chính của định lý có nhiều hơn hoặc bằng 2 tác giả, ví dụ như định lý Gauss-Wantzel, ở kí tự - (? ko biết chuẩn này được phân nhóm là kí tự ko, cần ktr lại), thì ta nên viết kí tự đó trong latex là 
+
+```tex
+--
+```
+
+thay vì chỉ viết trực tiếp kí tự đó từ bàn phím duy nhất một lần. 
+
+**Câu hỏi**: Vì sao ta phải làm điều này ? Có cần thiết quan trọng hay ko ? Nếu ko ghi cách viết hướng dẫn đó thì sao ?  
 
 ---
 
