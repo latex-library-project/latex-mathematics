@@ -1,18 +1,16 @@
+Phần giới thiệu được viết ở bên khác. Còn bây giờ chỉ tập trung vào việc sử dụng chúng trong toán học.
+
+## Bài học: 
+
 Trong một số trường hợp, khi người dùng viết tài liệu toán học cần [tham chiếu]() từ đoạn văn bản này đến phương trình toán học ở chế độ `display math`, mà không cần phải viết lặp lại, cũng như sẽ bị tràn ra khỏi văn bản đối với các [phương trình dài]() (? của phương trình đó ở chế độ `inline math` . . . (? viết tiếp đê)) 
 
-Để làm được điều này, trước tiên người dùng cần phải khai báo package ở bài học [liên kết thông thường]() 
-
-```latex 
-\usepackage{hyperref}
-```
-
-Tiếp theo, để tham chiếu chéo đến phương trình toán học đó, người dùng sử dụng lệnh 
+Để tham chiếu chéo đến phương trình toán học đó, trước tiên người dùng sử dụng lệnh 
 
 ```latex
-\label
+\label{}
 ```
 
-cần phải được đặt vào trong môi trường `equation`. 
+được đặt vào trong môi trường `equation` để tạo nhãn. 
 
 Cuối cùng là lệnh
 
@@ -31,11 +29,30 @@ hoặc lệnh
 > [!NOTE]  
 >  Người dùng nên để lệnh `\label` ở bên cạnh `\begin{equation}`, vì . . . (? vì sao thế nhỉ ?)
 
-. . . .(? viết ví dụ mới yéeeeeeee)
+. . . .(? viết ví dụ mới sau)
 
-```latex
+```tex
 \documentclass{article} % 
-\usepackage{hyperref} % . . .
+\begin{document} \label{eq:1} %
+\begin{equation} % Sử dụng môi trường equation để đánh số thứ tự ở phương trình logarit
+\log_b{xy} = \log_b{x} + \log_b{y} 
+\end{equation}
+. . . \ref{}
+\end{document}
+```
+
+Tuy vậy, người dùng cần phải khai báo thêm package ở bài học [liên kết thông thường]() là
+
+```latex 
+\usepackage{hyperref}
+```
+
+thì mới có thể tham chiếu được từ `\ref` hoặc `\eqref` đến `\label` tương ứng.
+
+Thêm package `hyperref` từ đoạn mã trên, ta được: 
+
+```tex
+\documentclass{article} % 
 \begin{document} \label{eq:1} %
 \begin{equation} % Sử dụng môi trường equation để đánh số thứ tự ở phương trình logarit
 \log_b{xy} = \log_b{x} + \log_b{y} 
