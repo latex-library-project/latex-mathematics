@@ -36,8 +36,14 @@
 
 ## f. 
 
-[[Các bài toán học khác]]   
++ [Tham chiếu chéo phương trình]()
+
++ [Tham chiếu chéo tiên đề, định nghĩa, ..vv..]()
 
 ## g. 
+
++ [Các bài toán học khác]()
+
+## h. 
 
 [Bài học toán nâng cao]()
