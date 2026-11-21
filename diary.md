@@ -95,3 +95,13 @@ Chỉ là, tôi nên tổng hợp quá trình đó ở trước, giữa hay sau 
 Ở mỗi bài học tôi trình bày dài lê thê, tôi nên tóm tắt, cô đọng, xúc tích lại kiến thức của phần bài học đó. 
 
 Điều này rất quan trọng phải không ? 
+
+--- 
+
+# 2026-11-22: 
+
+## Vấn đề 1.22.11.26: 
+
+Các ví dụ toán học được trình bày chính về toán học thuộc về lĩnh vực thiên văn học cũng như các ngành con của toán học là đại số và giải tích.
+
+Còn nếu thấy công thức toán học nào nằm ngoài các lĩnh vực đã nêu trên mà bản thân mình cảm thấy hay, thú vị về cách viết sang LaTeX, mình sẽ cân nhắc trình bày. 
