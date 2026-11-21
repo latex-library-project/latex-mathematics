@@ -239,7 +239,7 @@ Nhược điểm của cách này nằm ở việc người dùng . . . .(? như
 
 <div align="center">
 
-<img src="./images/Friedmann.jpg" alt="Friedmann">
+<img src="./images/Friedmann.jpg" alt="Friedmann" width="60%">
 
 Nhà vũ trụ học và nhà toán học người Nga Alexander Friedmann
 
@@ -251,7 +251,7 @@ Nhà vũ trụ học và nhà toán học người Nga Alexander Friedmann
 
 ## 3. Cú pháp dấu ngoặc một bên 
 
-Trong nhiều trường hợp viết toán học như biểu diễn hệ phương trình, điều kiện xét hàm số,  $\dots vv \dots$ , người dùng sẽ cần một dấu ngoặc lớn mở ở bên trái nhưng lại không có ở bên phải. 
+Trong nhiều trường hợp viết toán học như biểu diễn hệ phương trình, điều kiện xét hàm số,  $\dots vv \dots$ , người dùng sẽ cần viết một dấu ngoặc lớn mở ở bên trái nhưng lại không có ở bên phải.
 
 Hoặc ngược lại là người dùng sẽ cần một dấu ngoặc lớn mở ở bên phải nhưng lại không có ở bên trái như khi gom nhiều điều kiện giả thiết độc lập trong chứng minh hình học/đại số để suy ra một kết luận chung, hoặc khi định nghĩa hàm số phân nhánh theo chiều ngược $\dots vv \dots$
 
@@ -280,6 +280,8 @@ Và bên trong lệnh của cả hai trường hợp đó, người dùng cần 
 . . . 
 \end{matrix}
 ```
+
+
 
 Ví dụ . . .  với dãy số Fibonacci được xác định bởi hệ thức truy hồi tuyến tính 
 
@@ -348,7 +350,7 @@ $$
 
 <div align="center">
 
-<img src="./images/Fibonacci.jpg" alt="Fibonacci">
+<img src="/images/Fibonacci.jpg" alt="Fibonacci" width="70%">
 
 Nhà toán học người Ý Fibonacci
 
