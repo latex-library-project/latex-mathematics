@@ -82,4 +82,46 @@ Vấn đề này nên được giới thiệu sơ lược ở phần bài học 
 
 **Vấn đề 2** (vấn đề tham chiếu với định lý được viết theo tên tác giả): Với định lý có tên dài, chẳng hạn "định lý Gauss - Wantzel" thì làm sao để viết nội dung `\ref` sao cho có đầy đủ tên định lý đó để tham chiếu đến tiêu đề định lý ví dụ như định lý Gauss - Wantzel. 
 
-Cách viết ở trường hợp **vấn đề 2** này, chỉ nên được sử dụng khi viết các bài báo dạng ngắn (thuộc lớp article) về vấn đề lịch sử toán học ?
+Nếu chỉ sử dụng lệnh `\label` và `\ref` bình thường, mà lệnh khai báo môi trường định lý đó sử dụng lệnh `\newtheorem*{}{}`, thì hệ thống sẽ báo lỗi vàng (? đây là loại thông báo lỗi gì , quên mất gòi) **Package hyperref: Suppressing empty link**. 
+
+Cách viết ở trường hợp **vấn đề 2** này, chỉ nên được sử dụng khi viết các bài báo dạng ngắn (thuộc lớp article) về vấn đề lịch sử toán học (? khi nào thì nên sử dụng cách viết định lý này)
+
+
+Để khắc phục được điều này, ta sẽ sử dụng hai lệnh là `\hypertarget` và `\hyperlink` thay thế cho `\label` và `\ref`. 
+
+Xem qua ví dụ (tạm thời) sau: 
+
+```tex
+\documentclass{article}
+
+\usepackage[utf8]{vietnam}
+
+%  Khai báo màu đường link
+% \usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{hyperref}
+\hypersetup {
+    colorlinks = true,
+    linkcolor = blue,
+    filecolor = magenta,
+    urlcolor = cyan,
+    pdftitle = {Overleaf Example}, % Tiêu đề của tập tin PDF đầu ra
+    pdfpagemode = FullScreen,
+}
+
+% . . .
+\usepackage{amsthm}
+
+% . . . 
+\newtheorem*{thm}{Định lý Gauss--Wantzel}
+
+\begin{document}
+
+\begin{thm}
+\hypertarget{thm:gauss-wantzel}
+Nội dung định lý Gauss--Wantzel ...
+\end{thm}
+
+Theo \hyperlink{thm:gauss-wantzel}{định lý Gauss--Wantzel}, ta có ...
+
+\end{document} 
+```
