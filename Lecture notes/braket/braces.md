@@ -139,22 +139,26 @@ Hai lệnh `\left`, `\right` chỉ có thể được sử dụng ở bên trong
 
 Áp dụng các điều trên vào lại ví dụ . . ., ta được :
 
-```latex
+```tex
 \documentclass{article}
+
 \usepackage{amsmath} % 
+
 \begin{document}
+
 \[ 
-\text{H}^2 
-= \left ( \frac{\dot{a}}{a} \right)^2 % . . .
-= \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+	\mathrm{H}^2 
+	= \left ( \frac{\dot{a}}{a} \right)^2 % . . .
+	= \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
 \]
+
 \end{document}
 ```
 
 Kết quả cho ra được lúc này sẽ là: 
 
 $$
-\text{H}^2 = \left( \frac{\dot{a}}{a} \right)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
+\mathrm{H}^2 = \left( \frac{\dot{a}}{a} \right)^2 = \frac{8\pi G}{3}\rho - \frac{kc^2}{a^2} + \frac{\Lambda c^2}{3}
 $$
 
 >[!WARNING]
