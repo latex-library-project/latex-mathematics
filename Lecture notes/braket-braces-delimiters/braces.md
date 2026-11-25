@@ -4,9 +4,9 @@
 
 Trong cú pháp của LaTeX, dấu ngoặc nhọn `{}` được mặc định nhằm sử dụng để nhóm các tham số hoặc tập lệnh lại với nhau. 
 
-. . . 
+. . . (? trình bày gì đó thêm chăng)
 
-Nếu như người dùng viết trực tiếp chúng vào phần soạn thảo LaTeX, thì dấu ngoặc nhọn đó sẽ không được hiển thị trực tiếp khi người dùng xuất bản trang tài liệu, vì hệ thống sẽ không thể phân biệt được . . . (? vì sao thế nhỉ)   
+Nếu như người dùng viết trực tiếp chúng vào phần soạn thảo LaTeX, thì dấu ngoặc nhọn đó sẽ không được hiển thị trực tiếp khi người dùng biên dịch trang tài liệu, vì hệ thống sẽ không thể phân biệt được . . . (? vì sao thế nhỉ)   
 
 Để dễ hình dung, người dùng hãy xem qua ví dụ sau đây với tích Descartes của hai tập hợp $A$ và $B$, kí hiệu là $A \times B$ là tập hợp của các cặp $(a,b)$ trong đó $a \in A$, $b \in B$ theo thứ tự $a$ trước, $b$ sau:
 
@@ -205,6 +205,8 @@ Nhà vũ trụ học và nhà toán học người Nga Alexander Friedmann
 
 ### 3. Cú pháp dấu ngoặc một bên 
 
+#### Ý thứ nhất: Lệnh `\left`, `\right`: 
+
 Trong nhiều trường hợp viết toán học như biểu diễn hệ phương trình, điều kiện xét hàm số,  $\dots vv \dots$ , người dùng sẽ cần viết một dấu ngoặc lớn mở ở bên trái nhưng lại không có ở bên phải.
 
 Hoặc ngược lại là người dùng sẽ cần một dấu ngoặc lớn mở ở bên phải nhưng lại không có ở bên trái như khi gom nhiều điều kiện giả thiết độc lập trong chứng minh hình học/đại số để suy ra một kết luận chung, hoặc khi định nghĩa hàm số phân nhánh theo chiều ngược $\dots vv \dots$
@@ -235,9 +237,87 @@ Và bên trong lệnh của cả hai trường hợp đó, người dùng cần 
 \end{matrix}
 ```
 
+Ví dụ . . . với hệ hệ phương trình Lotka-Volterra: 
+
+```tex
+\documentclass{article}
+\usepackage{amsmath} % Để viết phân số
+\begin{document}
+\[
+    \left\{
+        \begin{matrix}
+            \dfrac{dx}{dy} = \alpha x - \beta xy \\
+            \dfrac{dx}{dy} = \delta xy - \gamma y
+        \end{matrix}
+    \right.
+\]
+\end{document}
+```
+
+Kết quả hiển thị: 
+
+$$
+    \left\{
+        \begin{matrix}
+            \dfrac{dx}{dy} = \alpha x - \beta xy \\
+            \dfrac{dx}{dy} = \delta xy - \gamma y
+        \end{matrix}
+    \right.
+$$
+
+. . . (? tăng khoảng cách giữa hai ptr của hệ trên với 1em)
+
+```tex
+    \begin{matrix}
+        \dfrac{dx}{dy} = \alpha x - \beta xy \\[1em]
+        \dfrac{dx}{dy} = \delta xy - \gamma y
+    \end{matrix}
+```
+
+Đầy đủ lại đoạn mã: 
+
+```tex
+\documentclass{article}
+\usepackage{amsmath} % Để viết phân số
+\begin{document}
+\[
+    \left\{
+        \begin{matrix}
+            \dfrac{dx}{dy} = \alpha x - \beta xy \\[1em]
+            \dfrac{dx}{dy} = \delta xy - \gamma y
+        \end{matrix}
+    \right.
+\]
+\end{document}
+```
+
+Kết quả hiện thị lúc này: 
+
+$$
+    \left\{
+        \begin{matrix}
+            \dfrac{dx}{dy} = \alpha x - \beta xy \\[1em]
+            \dfrac{dx}{dy} = \delta xy - \gamma y
+        \end{matrix}
+    \right.
+$$
 
 
-Ví dụ . . .  với dãy số Fibonacci được xác định bởi hệ thức truy hồi tuyến tính 
+<div align="center">
+
+<img src="/images/Lotka-Volterra.jpg" alt="Lotka-Volterra" width="70%">
+
+Nhà toán học người . . .  Alfred J. Lotka vầ nhà toán học người . . .  Vito Volterra 
+
+</div>
+
+---
+
+#### Ý thứ hai: Khắc phục lệnh `\left` và `\right` khi viết cho dãy số Fibonacci 
+
+##### Ý thứ hai chấm một: Môi trường `array`
+
+Tuy vậy, khi sử dụng cách viết dấu ngoặc một bên trên với dãy số Fibonacci được xác định bởi hệ thức truy hồi tuyến tính: 
 
 ```latex
 \documentclass{article}
@@ -254,7 +334,7 @@ Ví dụ . . .  với dãy số Fibonacci được xác định bởi hệ thứ
 \end{document}
 ```
 
-Kết quả cho ra được sẽ chỉ xuất hiện một dấu ngoặc nhọn lớn duy nhất che phủ ở bên trái của .  .  .
+Kết quả hiển thị bên trong trang latex: 
 
 $$
 \left\{
@@ -266,7 +346,67 @@ $$
 \right.
 $$
 
-Hoặc người dùng cũng có thể sử dụng môi trường `cases` sau:
+Ta thấy, kết quả cho ra được đã xuất hiện một dấu ngoặc nhọn lớn duy nhất che phủ ở bên trái của hệ phương trình trên. Tuy vậy, chúng được căn chỉnh . . . (? nêu vấn đề và giải thích vì sao)
+
+Để khắc phục được điều này, người dùng có thể liên hệ đến môi trường `array` ở bài học [chèn bảng]().
+
+```tex
+\documentclass{article}
+\begin{document}
+\[
+\left\{
+  \begin{array}{l}
+		u_1 = 1 \\ 
+		u_2 = 1 \\ 
+		u_{n} = u_{n-1} + u_{n-2}, \ \forall n \geq 2  
+  \end{array}
+\right.
+\]
+\end{document}
+```
+
+$$
+\left\{
+  \begin{array}{l}
+		u_1 = 1 \\ 
+		u_2 = 1 \\ 
+		u_{n} = u_{n-1} + u_{n-2}, \ \forall n \geq 2  
+  \end{array}
+\right.
+$$
+
+tuy vậy sẽ có một khoảng trống do . . . (? do gì gây ra, vì sao)
+
+```tex
+\documentclass{article}
+\begin{document}
+\[
+\left\{
+\begin{array}{@{}l}
+		u_1 = 1 \\ 
+		u_2 = 1 \\ 
+		u_{n} = u_{n-1} + u_{n-2}, \ \forall n \geq 2  
+  \end{array}
+\right.
+\]
+\end{document}
+```
+
+$$
+\left\{
+\begin{array}{@{}l}
+		u_1 = 1 \\ 
+		u_2 = 1 \\ 
+		u_{n} = u_{n-1} + u_{n-2}, \ \forall n \geq 2  
+  \end{array}
+\right.
+$$
+
+---
+
+##### Ý thứ hai chấm hai: Môi trường `cases` khắc phục cho môi trường `array`
+
+Tuy vậy hai cách trên khá rườm rà và không cần thiết. Vì vậy, hãy sử dụng môi trường mới là `cases` để viết dấu ngoặc một bên trái với công thức truy hồi tuyến tính dãy Fibonacci một cách nhanh chóng:
 
 ```latex
 \begin{cases}
@@ -278,7 +418,7 @@ Trước đó, người dùng nhớ hãy khai báo package `amsmath`, thì mới
 
 Viết lại ví dụ . . . trên bằng môi trường `cases`: 
 
-```latex
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
@@ -292,10 +432,10 @@ Viết lại ví dụ . . . trên bằng môi trường `cases`:
 \end{document}
 ```
 
-Kết quả cho ra được vẫn sẽ tương tự với kết quả ta có được ở trên (? viết lỗi nhóe). 
+Kết quả hiển thị vẫn sẽ tương tự với kết quả ta có được ở trên (? viết lỗi nhóe). 
 
 $$
-\begin{cases} % không cần phải thêm môi trường matrix 
+\begin{cases} 
 	u_1 = 1 \\ 
 	u_2 = 1 \\ 
 	u_{n+1} = u_n + u_{n-1}, \forall n \geq 2  
@@ -310,6 +450,87 @@ Nhà toán học người Ý Fibonacci
 
 </div>
 
+---
+
+#### Ý thứ ba: Khắc phục môi trường `cases` bằng môi trường `dcases`
+
+Khi dụng môi trường `cases` để viết giả thuyết Riemann sau:
+
+```tex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\[
+	\begin{cases} 
+	\zeta(s) 
+	= 
+	\sum_{n=1}^{\infty} \frac{1}{n^s} & \text{khi } \text{Re}(s) > 1 \\[1.5em]
+	2^s \pi^{s-1} \sin\left(\frac{\pi s}{2}\right) \Gamma(1-s) \zeta(1-s) & \text{khi } \text{Re}(s) < 1
+	\end{cases}
+\]
+\end{document}
+```
+
+$$
+\zeta(s) 
+= 
+\begin{cases}
+\sum_{n=1}^{\infty} \frac{1}{n^s} & \text{khi } \text{Re}(s) > 1 \\[1.5em]
+2^s \pi^{s-1} \sin\left(\frac{\pi s}{2}\right) \Gamma(1-s) \zeta(1-s) & \text{khi } \text{Re}(s) < 1
+\end{cases}
+$$
+
+Ta thấy phân số và kí hiệu tổng phải sử dụng thêm lệnh `displaystyle` ở lệnh `sum` và lệnh `frac` lúc này phải để là `dfrac` nhằm canh chiều cao lại (? viết lại đoạn này): 
+
+$$
+\zeta(s) 
+= 
+\begin{cases}
+\displaystyle\sum_{n=1}^{\infty} \frac{1}{n^s} & \text{khi } \text{Re}(s) > 1 \\[1.5em]
+2^s \pi^{s-1} \sin\left(\dfrac{\pi s}{2}\right) \Gamma(1-s) \zeta(1-s) & \text{khi } \text{Re}(s) < 1
+\end{cases}
+$$
+
+Để khắc phục được điều này, ta sẽ sử dụng môi trường `dcases` như bản nâng cấp của môi trường `cases`. 
+
+Để sử dụng được môi trường này, trước tiên người dùng nhớ cần phải khai báo package `mathtools`, sau đó chỉ cần viết lại phần toán học đó vào môi trường `dcases`: 
+
+```tex
+\documentclass{article}
+\usepackage{mathtools}
+\begin{document}
+\[
+\zeta(s) 
+= 
+\begin{dcases}
+    \sum_{n=1}^{\infty} \frac{1}{n^s} & \text{khi } \text{Re}(s) > 1 \\
+    2^s \pi^{s-1} \sin\left(\frac{\pi s}{2}\right) \Gamma(1-s) \zeta(1-s) & \text{khi } \text{Re}(s) < 1
+\end{dcases}
+\]
+\end{document}
+```
+
+$$
+\zeta(s) 
+= 
+\begin{dcases}
+    \sum_{n=1}^{\infty} \frac{1}{n^s} & \text{khi } \text{Re}(s) > 1 \\
+    2^s \pi^{s-1} \sin\left(\frac{\pi s}{2}\right) \Gamma(1-s) \zeta(1-s) & \text{khi } \text{Re}(s) < 1
+\end{dcases}
+$$
+
+<div align="center">
+
+<img src="/images/Riemann.jpg" alt="Riemann" width="70%">
+
+Nhà toán học người Đức Riemann
+
+</div>
+
+### Ý thứ tư: 
+
+Quay trở lại với 
+
 . . . (viết tiếp ví dụ với dấu ngoặc lớn hiển thị ở bên phải mà ko có ở bên trái) 
 
 Tham khảo: https://gemini.google.com/app/4475fd095760fba9?hl=vi   
@@ -318,10 +539,10 @@ Tham khảo: https://gemini.google.com/app/4475fd095760fba9?hl=vi
 
 ## Tài liệu tham khảo: 
 
-\[1]:  Nguồn tham khảo viết ở Overleaf: https://www.overleaf.com/learn/latex/Brackets_and_Parentheses  
+. . .
 
 ---
 
-## Footnote: 
+## Footnote:
 
-[^1]: Công thức tham khảo từ: https://mathworld.wolfram.com/TaylorSeries.html 
+. . .

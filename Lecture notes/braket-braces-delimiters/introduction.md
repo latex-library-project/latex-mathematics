@@ -50,3 +50,15 @@ VÍ dụ về dấu giá trị tuyệt đối với . . . (? viết ví dụ m�
 . . .
 
 Bên cạnh đó, người dùng cần lưu tâm đến một số lưu ý quan trọng sau đây khi sử dụng dấu ngoặc trong LaTeX.  
+
+---
+
+## Tài liệu tham khảo: 
+
+\[1]:  Nguồn tham khảo viết ở Overleaf: https://www.overleaf.com/learn/latex/Brackets_and_Parentheses  
+
+---
+
+## Footnote: 
+
+[^1]: Công thức tham khảo từ: https://mathworld.wolfram.com/TaylorSeries.html 
