@@ -1,54 +1,6 @@
 ## Bài học:
 
-
-Dấu ngoặc rất phổ biến trong việc bao quát các biểu thức, toán tử trong toán học. Một số dấu ngoặc thông dụng được sử dụng, đi kèm với lệnh của chúng trong LaTeX được trình bày ở bảng dưới đây: 
-
-|         Ký hiệu          | Tên tiếng Việt                      | Tên tiếng Anh                     | Lệnh LaTeX                                             |
-| :----------------------: | :---------------------------------- | :-------------------------------- | :----------------------------------------------------- |
-|         $(...)$          | Dấu ngoặc đơn                       | Parentheses (or Round brackets)   | `(...)` (nhập dấu ngoặc tròn trên bàn phím)            |
-|         $[...]$          | Dấu ngoặc vuông                     | Brackets (or Square brackets)     | `[...]` (nhập dấu ngoặc vuông trên bàn phím)           |
-|        $\{... \}$        | Dấu ngoặc nhọn                      | Braces (or Curly brackets)        | `\{...\}` (nhập dấu ngoặc nhọn trên bàn phím)          |
-|   $\langle... \rangle$   | Dấu ngoặc nhọn góc / Ngoặc nhọn dẹt | Angle brackets                    | `\langle ... \rangle`                                  |
-|     $\vert... \vert$     | Dấu trị tuyệt đối / Dấu gạch đứng   | Vertical bars (or Absolute value) | `\vert...\vert` hoặc `\|...\|` (nhập \| trên bàn phím) |
-|     $\Vert... \Vert$     | Dấu chuẩn (Toán học) / Dấu gạch đôi | Double vertical bars (or Norm)    | `\Vert...\Vert` hoặc `\|\| ...\|\|`                    |
-|   $\lfloor... \rfloor$   | Dấu hàm sàn / Ngoặc dưới            | Floor brackets                    | `\lfloor...\rfloor`                                    |
-|    $\lceil... \rceil$    | Dấu hàm trần / Ngoặc trên           | Ceiling brackets                  | `\lceil...\rceil`                                      |
-| $\ulcorner... \urcorner$ |                                     |                                   | `\ulcorner... \urcorner`                               |
-|   $/...\textbackslash$   |                                     |                                   | `/...\textbackslash`                                   |
-
-Để viết toán học ở chế độ `inline math` hoặc `display math` được bao quát bởi dấu ngoặc, người dùng chỉ cần đặt phần toán học đó vào bên trong các dấu ngoặc ở bảng trên một cách bình thường. 
-
-Ví dụ về dấu ngoặc tròn với định lý Taylor[^1] . . . (? viết tiếp phần định lý Taylor này)
-
-```latex
-\documentclass{article}
-\begin{document}
-\[
-f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f^{''}(a)}{2!}(x-a)^2 + \frac{f^{'''}(a)}{3!}(x-a)^3 + \dots = \sum^\infty_{n = 0}\frac{f^{(n)}(a)}{n!}(x-a)^n
-\]
-\end{document}
-```
-
-Kết quả cho ra được sẽ là 
-
-$$
-f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f^{''}(a)}{2!}(x-a)^2 + \frac{f^{'''}(a)}{3!}(x-a)^3 + \dots = \sum^\infty_{n = 0}\frac{f^{(n)}(a)}{n!}(x-a)^n
-$$
-
-
-<div align="center">
-
-<img src="./images/Brooks Taylor.jpg" alt="Taylor">
-
-Nhà toán học người Anh Brooks Taylor
-
-</div>
-
-Bên cạnh đó, người dùng cần lưu tâm đến một số lưu ý quan trọng sau đây khi sử dụng dấu ngoặc trong LaTeX.  
-
----
-
-## 1. Nguyên tắc hiển thị dấu ngoặc nhọn `\{ \}`
+### 1. Nguyên tắc hiển thị dấu ngoặc nhọn `\{ \}`
 
 Trong cú pháp của LaTeX, dấu ngoặc nhọn `{}` được mặc định nhằm sử dụng để nhóm các tham số hoặc tập lệnh lại với nhau. 
 
@@ -100,7 +52,7 @@ Nhà toán học và triết gia người Pháp René Descartes
 
 ---
 
-## 2. Quy tắc tự động thay đổi kích thước (Auto-resizing)
+### 2. Quy tắc tự động thay đổi kích thước (Auto-resizing)
 
 Nếu phương trình toán học có các biểu thức được chứa bên trong dấu ngoặc là [phân số]() ($\frac{a}{b}$), [tích phân]()($\int$), [số mũ]() ($a^x$) . . . vv. . . (? như thế nào đó so với dấu các dấu ngoặc), các dấu ngoặc thông thường sẽ bị quá nhỏ và mất cân đối như ở ví dụ về phương trình Friedmann thứ nhất . . .  : 
 
@@ -249,11 +201,9 @@ Nhà vũ trụ học và nhà toán học người Nga Alexander Friedmann
 
 </div>
 
-
-
 ---
 
-## 3. Cú pháp dấu ngoặc một bên 
+### 3. Cú pháp dấu ngoặc một bên 
 
 Trong nhiều trường hợp viết toán học như biểu diễn hệ phương trình, điều kiện xét hàm số,  $\dots vv \dots$ , người dùng sẽ cần viết một dấu ngoặc lớn mở ở bên trái nhưng lại không có ở bên phải.
 
