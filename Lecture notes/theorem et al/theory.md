@@ -91,7 +91,6 @@ Viết ví dụ với việc viết toán học ở chế độ **inline math** 
 ```
 
 
-
 Viết ví dụ với việc viết toán học ở chế độ **display math** vào trong định lý Euler-Fermat trong ...: 
 
 ```tex
@@ -109,6 +108,31 @@ Viết ví dụ với việc viết toán học ở chế độ **display math**
         a^{\phi (n)} \equiv 1 \pmod{n}
     \]
 \end{theorem}
+
+\end{document}
+```
+
+Viết ví dụ với việc viết danh sách có thứ tự vào trong định nghĩa lắt cắt Dedekind (được tham khảo từ trang 17 cuốn giáo trình giải tích giải tích thực một biến): 
+
+```tex
+\documentclass{article}
+
+\usepackage[utf8]{vietnam}
+
+\usepackage{amsfonts,amssymb}
+
+\newtheorem{definition}{Định nghĩa}
+
+\begin{document}
+
+\begin{definition}
+    Tập con các số hữu tỉ \(a \subset \mathbb{Q}\) gọi là một lát cắt hay là một số thực nếu:
+    \begin{enumerate}
+        \item \(a \ne \varnothing, a \ne \mathbb{Q}\)
+        \item Nếu \(p \in a\) và \(q \in \mathbb{Q}, q < p\) thì \(p \in a\)
+        \item \(\forall p \in a, \exists q \in a : p <  q\) và như vậy trong \(a\) không có số lớn nhất.
+    \end{enumerate}
+\end{definition}
 
 \end{document}
 ```
