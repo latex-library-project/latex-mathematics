@@ -396,6 +396,14 @@ nên là ta không cần phải sử dụng lệnh `\operatorname` trong trườ
 
 ---
 
+## Câu hỏi: 
+
+**Câu hỏi 1**: Sự giống và khác nhau giữa lệnh `\mathrm` và `operetorname`.
+
+---
+
+## Footnote: 
+
 [^first]: Tham khảo từ trang wiki https://en.wikipedia.org/wiki/Arg_max 
 
 [^second]: Tham khảo từ trang wiki https://en.wikipedia.org/wiki/Limit_inferior_and_limit_superior#Definition_for_sequences

@@ -3,11 +3,13 @@ title: Danh sách các kí hiệu, chữ cái toán học
 description: Nơi đây tôi sẽ sưu tập một số kí hiệu toán học quan trọng, và cách sử dụng chúng. 
 ---
 
-## Bài học
+## Bài học:
 
 Tham khảo trang 70 tài liệu đây: **Một tài liệu ngắn gọn giới thiệu về LATEX 2ε - hay LATEX 2ε trong 155 phút**,  https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf, https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf, cũng như là **LaTeX Formal Methods Reference**  https://www.cs.put.poznan.pl/ksiek/latexmath.html#id2  
 
-## Các dấu trọng âm trong chế độ soạn thảo toán học: 
+---
+
+### Các dấu trọng âm trong chế độ soạn thảo toán học: 
 
 | Lệnh        | Kí hiệu     | Lệnh        | Kí hiệu     | Lệnh          | Kí hiệu       | Lệnh            | Kí hiệu         |
 | :---------- | ----------- | ----------- | ----------- | ------------- | ------------- | --------------- | --------------- |
@@ -15,8 +17,9 @@ Tham khảo trang 70 tài liệu đây: **Một tài liệu ngắn gọn giới 
 | `\grave{a}` | $\grave{a}$ | `\dot{a}`   | $\dot{a}$   | `\ddot{a}`    | $\ddot{a}$    | `\breve{a}`     | $\breve{a}$     |
 | `\bar{a}`   | $\bar{a}$   | `\vec{a}`   | $\vec{a}$   | `\widehat{A}` | $\widehat{A}$ | `\widetilde{A}` | $\widetilde{A}$ |
 
-## Các chữ cái Hy Lạp viết thường 
+---
 
+### Các chữ cái Hy Lạp viết thường:
 
 ![](LaTeX-Library-project-v1.0.0/images/img6.1.jpg)
 
@@ -31,6 +34,12 @@ Tham khảo trang 70 tài liệu đây: **Một tài liệu ngắn gọn giới 
 |          |          |             |             |          |          |            |            |
 
 --- 
+
+### Hàm và toán tử trong toán học (?): 
+
+$\mathrm{ord}_{n}(a)$
+
+$\deg$
 
 ## Tài liệu tham khảo: 
 
