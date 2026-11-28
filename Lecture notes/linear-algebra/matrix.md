@@ -342,6 +342,24 @@ To produce a small matrix suitable for use in text, there is a `smallmatrix` env
 
 To produce a small matrix suitable for use in text, there is a `smallmatrix` environment $\begin{psmallmatrix}1 & 2 \\ 3 & 4\end{psmallmatrix}$ that comes closer to fitting within a single text line than a normal matrix. This example was produced by . . . 
 
+\+ Ma trận $A$ cấp $1 \times n$ 
+
+$$
+\begin{bmatrix} 
+a_{11} & a_{12} & \dots & a_{1n} 
+\end{bmatrix}
+$$
+
+```latex
+\[
+\begin{bmatrix} 
+a_{11} & a_{12} & \dots & a_{1n} 
+\end{bmatrix}
+\]
+```
+
+---
+
 ### Ma trận bổ sung 
 
 Cho một hệ phương trình tuyến tính tổng quát . . . 
@@ -421,6 +439,8 @@ $$
 \end{array} 
 \right] 
 $$
+
+---
 
 ### Pp khử Gauss - Jordan 
 

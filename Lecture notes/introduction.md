@@ -1,5 +1,17 @@
 ## Bài học:
 
+Viết toán học luôn là chủ đề yêu thích của tác giả, vậy nên có lẽ sẽ hợp lý nếu như tác giả vừa giới thiệu phần chủ đề toán học, cũng như là cách viết các kí hiệu toán học đó trên LaTeX thì sẽ một công đôi việc, mang đến cảm giác thú vị đến người đọc.
+
+Trước tiên, người viết cần làm rõ cấu trúc viết . . . 
+
+<div align="center">
+
+<img src="LaTeX-Library-project-v1.0.0/images/LoveMath.jpg">
+
+Keep calm and love math
+
+</div>
+
 ### Giới thiệu:
 
 Một trong những động lực lớn nhất thúc đẩy [Donald Knuth]() khi bắt đầu phát triển hệ thống TeX ban đầu là tạo ra một công cụ cho phép xây dựng các công thức toán học một cách đơn giản, đồng thời trông chuyên nghiệp khi in ấn. Việc ông thành công có lẽ là lý do tại sao TeX (và sau này là LaTeX) trở nên phổ biến trong cộng đồng khoa học. Việc trình bày toán học là một trong những thế mạnh lớn nhất của LaTeX. Đây cũng là một chủ đề rộng lớn do sự tồn tại của rất nhiều ký hiệu toán học.[^1]
