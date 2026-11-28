@@ -70,6 +70,28 @@ Khi viết "bổ đề" ở hai ví dụ trên, người viết đã đồng b�
 
 ### Ý thứ hai: Áp dụmg bài học viết toán ở chế độ `in/dis` và tạo danh sách có/ko thứ tự
 
+Viết ví dụ với việc viết toán học ở chế độ **inline math** vào trong định lý Bolzano - Weierstrass[^1] trong ...:
+
+```tex
+\documentclass{article}
+
+\usepackage[utf8]{vietnam}
+
+\usepackage{amsfonts}
+
+\newtheorem{theorem}{Định lý}
+
+\begin{document}
+
+\begin{theorem}[Bolzano--Weierstrass]
+    Tập \([0,1]\) là một tập compact trên \(\mathbb{R}\) với tôpô thông thường. (Hay nói cách khác mọi dãy \(x_{0}, x_{1}, \dots , x_{n} , \dots\) có vô hạn phần tử trong \([0,1]\) đều có thể trích ta được một dãy con hội tụ trong \([0,1]\)) 
+\end{theorem}
+
+\end{document}
+```
+
+
+
 Viết ví dụ với việc viết toán học ở chế độ **display math** vào trong định lý Euler-Fermat trong ...: 
 
 ```tex
@@ -208,3 +230,9 @@ Tổng hợp lại ta được:
 
 \end{document}
 ```
+
+--- 
+
+## Footnote: 
+
+[^1]: Tham khảo từ trang 60 cuốn lý thuyết số sơ cấp của thầy Châu và thầy Cường.
