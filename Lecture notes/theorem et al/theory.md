@@ -2,6 +2,8 @@
 
 (Sẽ thay bằng một ví dụ mới sau)
 
+---
+
 ### Ý thứ nhất: Cách sử dụng cơ bản
 
 Để viết được tiên đề, định nghĩa, định lý ..vv.. trong soạn thảo LaTeX, trước tiên người dùng sẽ cần phải khai báo chúng vào lệnh 
@@ -68,7 +70,7 @@ Khi viết "bổ đề" ở hai ví dụ trên, người viết đã đồng b�
 
 ### Ý thứ hai: Áp dụmg bài học viết toán ở chế độ `in/dis` và tạo danh sách có/ko thứ tự
 
-Viết ví dụ với việc viết toán học ở chế độ **display math** vào trong định lý Euler-Fermat trong ....: 
+Viết ví dụ với việc viết toán học ở chế độ **display math** vào trong định lý Euler-Fermat trong ...: 
 
 ```tex
 \documentclass{article}
@@ -161,5 +163,48 @@ Nếu người dùng viết . . . (? chưa biết mô tả sao)
 
 
 ```tex
+\begin{lemma}
+    Cho P là một tập hợp sắp thứ tự riêng phần và giả sử mọi xích trong P đều có một chặn trên trong P. Khi đó P có một phần tử cực đại.
+    [Bổ đề Kuratowski--Zorn]
+\end{lemma}
+```
 
+hoặc 
+
+```tex
+\begin{lemma}
+
+    [Bổ đề Kuratowski--Zorn]
+    Cho P là một tập hợp sắp thứ tự riêng phần và giả sử mọi xích trong P đều có một chặn trên trong P. Khi đó P có một phần tử cực đại.
+\end{lemma}
+```
+
+thì hệ thống sẽ hiểu `[Gauss]` cũng là nội dung bên trong phần định nghĩa đó, nên sẽ không thêm chú thích bên cạnh tiêu đề định lý.
+
+Ta chỉ cần để từ đó như cách đã hướng dẫn (? mô tả chán quá) và không nên khoảng cách . . . bằng cách xóa đi dòng trắng đó, hoặc thêm chú thích. 
+
+Khuyến khích nên để phần mô tả đó (? mô tả đó là sao) bên cạnh lệnh `\begin{}` 
+
+```tex
+\begin{lemma}[Bổ đề Kuratowski--Zorn]
+    Cho P là một tập hợp sắp thứ tự riêng phần và giả sử mọi xích trong P đều có một chặn trên trong P. Khi đó P có một phần tử cực đại.
+\end{lemma}
+```
+
+Tổng hợp lại ta được: 
+
+```tex
+\documentclass{article}
+
+\usepackage[utf8]{vietnam}
+
+\newtheorem{lemma}{Bổ đề}
+
+\begin{document}
+
+\begin{lemma}[Bổ đề Kuratowski--Zorn]
+    Cho P là một tập hợp sắp thứ tự riêng phần và giả sử mọi xích trong P đều có một chặn trên trong P. Khi đó P có một phần tử cực đại.
+\end{lemma}
+
+\end{document}
 ```

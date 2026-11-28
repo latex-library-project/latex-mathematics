@@ -1,3 +1,9 @@
+---
+title: Danh sách các kí hiệu, chữ cái toán học
+---
+
+## Bài học
+
 Tham khảo trang 70 tài liệu đây: **Một tài liệu ngắn gọn giới thiệu về LATEX 2ε - hay LATEX 2ε trong 155 phút**,  https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf, https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf, cũng như là **LaTeX Formal Methods Reference**  https://www.cs.put.poznan.pl/ksiek/latexmath.html#id2  
 
 ## Các dấu trọng âm trong chế độ soạn thảo toán học: 
@@ -13,7 +19,7 @@ Tham khảo trang 70 tài liệu đây: **Một tài liệu ngắn gọn giới 
 
 ![](LaTeX-Library-project-v1.0.0/images/img6.1.jpg)
 
-(trang chú trang 57 từ tài liệu **Một tài liệu ngắn gọn giới thiệu về LATEX 2ε - hay LATEX 2ε trong 155 phút** 
+(trang chú trang 57 từ tài liệu **Một tài liệu ngắn gọn giới thiệu về LATEX 2ε - hay LATEX 2ε trong 155 phút**)
 
 | Lệnh     | Kí hiệu  | Lệnh        | Kí hiệu     | Lệnh     | Kí hiệu  | Lệnh       | Kí hiệu    |
 | :------- | -------- | ----------- | ----------- | -------- | -------- | ---------- | ---------- |
