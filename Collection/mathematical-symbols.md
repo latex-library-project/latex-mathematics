@@ -1,5 +1,6 @@
 ---
 title: Danh sách các kí hiệu, chữ cái toán học
+description: Nơi đây tôi sẽ sưu tập một số kí hiệu toán học quan trọng, và cách sử dụng chúng. 
 ---
 
 ## Bài học

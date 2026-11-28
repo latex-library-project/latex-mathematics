@@ -147,30 +147,6 @@ $+ \ - \ = \ ! \ / \ ( \ ) \ [ \ ] \ < \ > \ | \ ' \ : \ *$
 
 $\mathring{A}$ 
 
----
-
-## Sai số (cũng ko hẳn)
-
-```latex
-\(a \pm b\)
-```
-
-$a \pm b$  
-
-Hai nghiệm phân biệt của một phương trình bậc hai một ẩn, với $\Delta > 0$ 
-
-$$
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-$$
-
-? . . . (dấu dưới đây là dấu gì nhỉ)
-
-```latex
-\(a \mp b\)
-```
-
-$a \mp b$
-
 --- 
 
 ## Các dấu chấm dài trong LaTex

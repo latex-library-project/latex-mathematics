@@ -1,7 +1,5 @@
 ## Giới thiệu: 
 
-Nơi đây tôi sẽ sưu tập một số kí hiệu toán học quan trọng, và cách sử dụng chúng. 
-
 **Ví dụ**: 
 
 |Kí hiệu|Cách đọc|LaTeX|Gói|Ghi chú|
@@ -39,6 +37,33 @@ x_{1,2} = - \frac{b \pm \sqrt{\Delta}}{4a}
 $$
 
 Đây chính là điều mà tôi mong muốn, khi sưu tập và trình bày về các kí hiệu trong LaTeX. 
+
+Tương tự ta cũng sẽ viết về kí hiệu $\mp$
+
+|Kí hiệu|Cách đọc|LaTeX|Gói|Ghi chú|
+|:------|:-------|:----|:--|:------| 
+|$\mp$|Dấu ....|`\mp`|Không cần|Chỉ được sử dụng trong lệnh và môi trường toán học|
+
+Ví dụ về kí hiệu $\mp$ với công thức cộng hàm $\cos$ trong lượng giác: 
+
+```tex
+\documentclass{article}
+
+\begin{document}
+
+\[
+    \cos(\alpha \pm \beta) = \cos(\alpha) \cos(\beta) \mp \sin(\alpha) \sin(\beta)
+\]
+
+\end{document}
+```
+
+$$
+    \cos(\alpha \pm \beta) = \cos(\alpha) \cos(\beta) \mp \sin(\alpha) \sin(\beta)
+$$
+
+>[!NOTE]
+> Cách viết kí hiệu dấu $\mp$ chính là đảo lại thứ tự của cách viết kí hiệu viết dấu cộng trù $\pm$.
 
 ---
 
